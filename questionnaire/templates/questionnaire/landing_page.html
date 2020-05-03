@@ -1,1 +1,23 @@
-<h2>Question1 Title</h2>
+{% extends 'questionnaire/base.html' %}
+
+{% block body %}
+    <div>
+        <h1>Project Title</h1>
+    </div>
+    <div>
+        <h2>consent </h2>
+    </div>
+    <div>
+        <p>brief project intro why I am asking them to do the survey</p>
+    </div>
+    <div>
+        <p>consent information
+        </p>
+    </div>
+    <div>
+        <button>
+            <a href="{% url 'questionnaire' %}">Accept and continue</a>
+        </button>
+        <!--<p><a href="{% url 'questionnaire' %}" class="internal_link" id="link_to_response_form">Accept and continue</a></p>-->
+    </div>
+{% endblock %}

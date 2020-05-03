@@ -1,28 +1,25 @@
-{% load static %}
+{% extends 'questionnaire/base.html' %}
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Responce</title>
-        <style>
-            #canvas {
-                margin-left: 10px;
-                margin-top: 10px;
-                border: thin solid #000000;
-            }
-        </style>
-    </head>
-    <body id="body">
-        <h2>Question1 Title</h2>
-        <form method="POST">{% csrf_token %}
-            {{ form.as_p }}
-            <div id="canvas-holder">
-                <canvas id="canvas"></canvas>
-            </div>
-            
-            <button type="submit">Submit</button>
-        </form>
-
+{% block body %}
+    <style>
+        #canvas {
+            margin-left: 10px;
+            margin-top: 10px;
+            border: thin solid #000000;
+        }
+    </style>
+    <div>
+        <h1>Project Title</h1>
+    </div>
+    <h2>Question1 Title</h2>
+    <p>more detail to the question and explanation of how to use the canvas</p>
+    <form method="POST" class="ResponseForm">{% csrf_token %}
+        {{ form.as_p }}
+        <div id="canvas-holder">
+            <canvas id="canvas"></canvas>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
     <script>
         var drawing_field = document.getElementById("id_drawing");
         // get canvas
@@ -84,6 +81,4 @@
             drawing_field.value = img_data;
         }
     </script>
-    </body>
-    
-</html>
+{% endblock %}
