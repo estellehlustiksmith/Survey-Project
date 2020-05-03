@@ -1,5 +1,19 @@
-<h2>Question1 Title</h2>
-<form method="POST" class="ResponseForm">{% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="save btn btn-default">Submit</button>
-</form>
+<!DOCTYPE html >
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/questionnaire.css' %}">
+
+<html>
+    <head>
+        <title>Project Title</title>
+    </head>    
+    <body> 
+        <div>
+            <h1>Project Title</h1>
+        </div>
+        <h2>Question1 Title</h2>
+        <form method="POST" class="ResponseForm">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Submit</button>
+        </form>
+    </body>
+</html>
