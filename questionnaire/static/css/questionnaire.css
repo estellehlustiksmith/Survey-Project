@@ -16,8 +16,8 @@ button {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: larger;  
     color: white;
-    background-color: blue;
-    border-color: blue;
+    background-color: rgb(255, 208, 0);
+    border-color: rgb(255, 208, 0);
     border-radius: 5px;         
     float: inline-end;
     padding-right: 10px;
@@ -28,6 +28,7 @@ button {
 
 a{
     color: white;
+    text-decoration: none;
 }
 
 #white_center {
