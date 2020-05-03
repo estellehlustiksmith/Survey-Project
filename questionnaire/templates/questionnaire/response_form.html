@@ -28,20 +28,20 @@
         // get canvas
         var canvas = document.getElementById("canvas")
 
-        var background = new Image();
-        background.src = '{% static "questionnaire/canvas_background.jpg" %}';
-
-        background.onload = function(){
-            ctx.drawImage(background,0,0);   
-        };
-
-        canvas.width = background.width;
-        canvas.height = background.height;
-
         // get canvas 2D context and set him correct size
         var ctx = canvas.getContext('2d');
         ctx.canvas.width = canvas.width;
         ctx.canvas.height = canvas.height;
+
+        var background = new Image();
+
+        background.onload = function(){
+            ctx.drawImage(background,0,0);   
+        };
+        background.src = '{% static "questionnaire/canvas_background.jpg" %}';
+
+        canvas.width = background.width;
+        canvas.height = background.height;
 
         // last known position
         var pos = { x: 0, y: 0 };
@@ -50,6 +50,7 @@
         document.addEventListener('mousedown', setPosition);
         document.addEventListener('mouseup', save)
         document.addEventListener('mouseenter', setPosition);
+        document.addEventListener('mouseleave', save)
 
         // new position from mouse event
         function setPosition(e) {
@@ -76,8 +77,9 @@
         }
     
         function save(e) {
-            var img_data = ctx.getImageData(0, 0, canvas.width, canvas.height);
-            console.log(img_data.data);
+            //var img_data = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            var img_data = canvas.toDataURL("image/png")
+            //console.log(img_data);
 
             drawing_field.value = img_data;
         }
