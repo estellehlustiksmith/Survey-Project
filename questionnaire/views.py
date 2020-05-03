@@ -16,4 +16,6 @@ def response_form(request):
         form = ResponseForm()
     return render(request, 'questionnaire/response_form.html', {'form': form})
 
+def ty_form_complete(request):
+    return render(request,'questionnaire/ty_form_complete.html', {})
 # Create your views here.

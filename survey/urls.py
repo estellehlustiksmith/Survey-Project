@@ -19,6 +19,7 @@ from questionnaire import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path( '', views.landing_page, name='ty'),
-    path( '', views.response_form, name='questionnaire')
+    path( '', views.landing_page, name='landing_page'),
+    path( 'questionnaire', views.response_form, name='questionnaire'),
+    path( 'thankyou', views.ty_form_complete, name='thankyou')
 ]
