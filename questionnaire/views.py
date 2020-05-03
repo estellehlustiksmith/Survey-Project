@@ -11,7 +11,8 @@ def response_form(request):
         if form.is_valid():
             questionnaire = form.save(commit=False)
             questionnaire.save()
-            return redirect('ty_form_complete.html', pk=questionnaire.pk)
+            return redirect('thankyou')
+          
     else:
         form = ResponseForm()
     return render(request, 'questionnaire/response_form.html', {'form': form})
