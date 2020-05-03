@@ -1,0 +1,15 @@
+<!DOCTYPE html >
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/questionnaire.css' %}">
+
+<html>
+    <head>
+        <title>Project Title</title>
+    </head>
+    <body>
+        <div id='white_center'>
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

@@ -1,27 +1,19 @@
-<!DOCTYPE html >
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/questionnaire.css' %}">
+{% extends 'questionnaire/base.html' %}
 
-<html>
-    <head>
-        <title>Project Title</title>
-    </head>
-    <body>
-        <div>
-            <h1>Project Title</h1>
-        </div>
-        <div>
-            <h2>consent </h2>
-        </div>
-        <div>
-            <p>brief project intro why I am asking them to do the survey</p>
-        </div>
-        <div>
-            <p>consent information</p>
-        </div>
-        <div>
-            <p><a href="{% url 'questionnaire' %}" class="internal_link" id="link_to_response_form">Accept and continue</a></p>
-        </div>
-    </body>
-</html>
-
+{% block body %}
+    <div>
+        <h1>Project Title</h1>
+    </div>
+    <div>
+        <h2>consent </h2>
+    </div>
+    <div>
+        <p>brief project intro why I am asking them to do the survey</p>
+    </div>
+    <div>
+        <p>consent information</p>
+    </div>
+    <div>
+        <p><a href="{% url 'questionnaire' %}" class="internal_link" id="link_to_response_form">Accept and continue</a></p>
+    </div>
+{% endblock %}

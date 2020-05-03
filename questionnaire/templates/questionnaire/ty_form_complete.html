@@ -1,13 +1,6 @@
-<!DOCTYPE html >
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/questionnaire.css' %}">
+{% extends 'questionnaire/base.html' %}
 
-<html>
-    <head>
-        <title>Project Title</title>
-    </head> 
-    <body>
-        <h2>Thank you</h2>
-        <p>Extra information</p>
-    </body>
-</html>
+{% block body %}
+    <h2>Thank you</h2>
+    <p>Extra information</p>
+{% endblock %}

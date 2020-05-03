@@ -1,19 +1,13 @@
-<!DOCTYPE html >
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/questionnaire.css' %}">
+{% extends 'questionnaire/base.html' %}
 
-<html>
-    <head>
-        <title>Project Title</title>
-    </head>    
-    <body> 
-        <div>
-            <h1>Project Title</h1>
-        </div>
-        <h2>Question1 Title</h2>
-        <form method="POST" class="ResponseForm">{% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="save btn btn-default">Submit</button>
-        </form>
-    </body>
-</html>
+{% block body %}
+    <div>
+        <h1>Project Title</h1>
+    </div>
+    <h2>Question1 Title</h2>
+    <p>more detail to the question and explanation of how to use the canvas</p>
+    <form method="POST" class="ResponseForm">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Submit</button>
+    </form>
+{% endblock %}
