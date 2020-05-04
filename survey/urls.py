@@ -18,7 +18,7 @@ from django.urls import path
 from questionnaire import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
     path( '', views.landing_page, name='landing_page'),
     path( 'questionnaire', views.response_form, name='questionnaire'),
     path( 'thankyou', views.ty_form_complete, name='thankyou')
