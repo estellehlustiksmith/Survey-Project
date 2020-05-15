@@ -9,7 +9,7 @@ class ResponseForm(forms.ModelForm):
         widgets = {'drawing': forms.HiddenInput()}#
 
 class Consent(forms.ModelForm):
-    consent1 = forms.BooleanField(required = True, label='I confirm that I have read and understand the information for the above study.  I have had the opportunity to consider the information, ask questions and have had these answered satisfactorily.')
+    consent1 = forms.BooleanField(required = True, label='I confirm that I have read and understand the information for the above study. I have had the opportunity to consider the information, ask questions and have had these answered satisfactorily.')
     consent2 = forms.BooleanField(required = True, label='I understand that my participation is voluntary and that I am free to withdraw at any time, without giving any reason, and without any adverse consequences or academic penalty.')
     consent3 = forms.BooleanField(required = True, label='I understand that research data collected during the study may be looked at by designated individuals from the University of Oxford where it is relevant to my taking part in this study. I give permission for these individuals to access my data.')
     consent4 = forms.BooleanField(required = True, label='I understand that this project has been reviewed by, and received ethics clearance through, the University of Oxford Central University Research Ethics Committee.')

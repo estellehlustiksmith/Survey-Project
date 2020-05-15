@@ -47,3 +47,45 @@ a{
     height: auto;
     border: thin solid #000000;
 }
+
+#consent {
+    padding-right: 80px;
+}
+
+#id_consent1 {
+    position: absolute;
+    right: 400px;
+}
+#id_consent2 {
+    position: absolute;
+    right: 400px;
+}
+#id_consent3 {
+    position: absolute;
+    right: 400px;
+}
+
+#id_consent4 {
+    position: absolute;
+    right: 400px;
+}
+
+#id_consent5 {
+    position: absolute;
+    right: 400px;
+}
+
+#id_consent6 {
+    position: absolute;
+    right: 400px;
+}
+
+#id_consent7 {
+    position: absolute;
+    right: 400px;
+}
+
+#id_consent8 {
+    position: absolute;
+    right: 400px;
+}
