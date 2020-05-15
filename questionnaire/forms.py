@@ -9,14 +9,14 @@ class ResponseForm(forms.ModelForm):
         widgets = {'drawing': forms.HiddenInput()}#
 
 class Consent(forms.ModelForm):
-    consent1 = forms.BooleanField(required = True)
-    consent2 = forms.BooleanField(required = True)
-    consent3 = forms.BooleanField(required = True)
-    consent4 = forms.BooleanField(required = True)
-    consent5 = forms.BooleanField(required = True)
-    consent6 = forms.BooleanField(required = True)
-    consent7 = forms.BooleanField(required = True)
-    consent8 = forms.BooleanField(required = True)
+    consent1 = forms.BooleanField(required = True, label='I confirm that I have read and understand the information for the above study.  I have had the opportunity to consider the information, ask questions and have had these answered satisfactorily.')
+    consent2 = forms.BooleanField(required = True, label='I understand that my participation is voluntary and that I am free to withdraw at any time, without giving any reason, and without any adverse consequences or academic penalty.')
+    consent3 = forms.BooleanField(required = True, label='I understand that research data collected during the study may be looked at by designated individuals from the University of Oxford where it is relevant to my taking part in this study. I give permission for these individuals to access my data.')
+    consent4 = forms.BooleanField(required = True, label='I understand that this project has been reviewed by, and received ethics clearance through, the University of Oxford Central University Research Ethics Committee.')
+    consent5 = forms.BooleanField(required = True, label='I understand who will have access to personal data provided, how the data will be stored and what will happen to the data at the end of the project.')
+    consent6 = forms.BooleanField(required = True, label='I understand how this research will be written up and published.')
+    consent7 = forms.BooleanField(required = True, label='I understand how to raise a concern or make a complaint.')
+    consent8 = forms.BooleanField(required = True, label='I agree to take part in the study.')
     class Meta:
         model = Consent
         fields=('consent1','consent2','consent3','consent4','consent5','consent6','consent7','consent8')

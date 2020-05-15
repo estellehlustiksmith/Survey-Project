@@ -13,39 +13,19 @@
         <p>tel:????</p>
     </div>
     <div>
-        <form method="POST" class="Consent">{% csrf_token %}
-            {{ form.as_p }}
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-    
-    
-    
-    <div>
         <h2>Participant consent form </h2>
     </div>
     <div>
-        <p>I confirm that I have read and understand the information for the above study.  I have had the opportunity to consider the information, ask questions and have had these answered satisfactorily.
-        </p>
-        <p>I understand that my participation is voluntary and that I am free to withdraw at any time, without giving any reason, and without any adverse consequences or academic penalty.
-        </p>
-        <p>I understand that research data collected during the study may be looked at by designated individuals from the University of Oxford where it is relevant to my taking part in this study. I give permission for these individuals to access my data.
-        </p>
-        <p>I understand that this project has been reviewed by, and received ethics clearance through, the University of Oxford Central University Research Ethics Committee.
-        </p>
-        <p>I understand who will have access to personal data provided, how the data will be stored and what will happen to the data at the end of the project.
-        </p>
-        <p>I understand how this research will be written up and published.
-        </p>
-        <p>I understand how to raise a concern or make a complaint.
-        </p>
-        <p>I agree to take part in the study</p>
+        <form method="POST" class="Consent">{% csrf_token %}
+            {{ form.as_p }}
+            </div>
+            <button type="submit">Accept and continue</button>
+        </form>
     </div>
-    <div>
+    <!--<div>
         <button>
             <a href="{% url 'questionnaire' %}">Accept and continue</a>
-        </button>
+        </button> -->
         <!--<p><a href="{% url 'questionnaire' %}" class="internal_link" id="link_to_response_form">Accept and continue</a></p>-->
-    </div>
+    <!--</div> -->
 {% endblock %}
