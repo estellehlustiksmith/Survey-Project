@@ -4,15 +4,43 @@
     <div>
         <h1>Project Title</h1>
     </div>
-    <div>
-        <h2>consent </h2>
+    <div>        
+        <p>brief project intro why I am asking them to do the survey/information sheet and how the data might be used</p>
     </div>
     <div>
-        <p>brief project intro why I am asking them to do the survey</p>
+        <p>If you have any questions, during or after taking part in the survey please do not hestitate to contact me at:</p>
+        <p>email: estelle.hlustik-smith@st-annes.ox.ac.uk</p>
+        <p>tel:????</p>
     </div>
     <div>
-        <p>consent information
+        <form method="POST" class="Consent">{% csrf_token %}
+            {{ form.as_p }}
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    
+    
+    <div>
+        <h2>Participant consent form </h2>
+    </div>
+    <div>
+        <p>I confirm that I have read and understand the information for the above study.  I have had the opportunity to consider the information, ask questions and have had these answered satisfactorily.
         </p>
+        <p>I understand that my participation is voluntary and that I am free to withdraw at any time, without giving any reason, and without any adverse consequences or academic penalty.
+        </p>
+        <p>I understand that research data collected during the study may be looked at by designated individuals from the University of Oxford where it is relevant to my taking part in this study. I give permission for these individuals to access my data.
+        </p>
+        <p>I understand that this project has been reviewed by, and received ethics clearance through, the University of Oxford Central University Research Ethics Committee.
+        </p>
+        <p>I understand who will have access to personal data provided, how the data will be stored and what will happen to the data at the end of the project.
+        </p>
+        <p>I understand how this research will be written up and published.
+        </p>
+        <p>I understand how to raise a concern or make a complaint.
+        </p>
+        <p>I agree to take part in the study</p>
     </div>
     <div>
         <button>
