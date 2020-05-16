@@ -3,6 +3,12 @@ from .models import Response
 from .models import Consent
 
 class ResponseForm(forms.ModelForm):
+    OPTIONS = (
+        ("a","Yes"),
+        ("b","No"),
+        ("c","I don't know")
+        )
+    question1 = forms.MultipleChoiceField(choices=OPTIONS, widget=forms.CheckboxSelectMultiple, label='Have you seen this work before')
     class Meta:
         model = Response
         fields = ('question1','question2','question3', 'drawing')

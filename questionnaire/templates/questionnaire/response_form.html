@@ -5,14 +5,15 @@
     <div>
         <h1>Project Title</h1>
     </div>
-    <h2>Question1 Title</h2>
     <p>more detail to the question and explanation of how to use the canvas</p>
     <form method="POST" class="ResponseForm">{% csrf_token %}
         {{ form.as_p }}
         <div id="canvas-holder">
             <canvas id="canvas"></canvas>
         </div>
-        <button type="submit">Submit</button>
+        <div id='submit'>
+            <button type="submit">Submit</button>
+        </div>
     </form>
     <script>
         var drawing_field = document.getElementById("id_drawing");
@@ -75,4 +76,11 @@
             drawing_field.value = img_data;
         }
     </script>
+    
+<div id='reset'>
+    <button>Reset</button>
+</div>
+<div>
+    <button id=background_change>></button>
+</div>
 {% endblock %}
