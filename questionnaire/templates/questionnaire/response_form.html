@@ -5,14 +5,10 @@
     <div>
         <h1>Project Title</h1>
     </div>
-    <p>more detail to the question and explanation of how to use the canvas</p>
     <form method="POST" class="ResponseForm">{% csrf_token %}
         {{ form.as_p }}
         <div id="canvas-holder">
             <canvas id="canvas"></canvas>
-        </div>
-        <div id='submit'>
-            <button type="submit">Submit</button>
         </div>
     </form>
     <script>
@@ -80,7 +76,10 @@
 <div id='reset'>
     <button>Reset</button>
 </div>
-<div>
-    <button id=background_change>></button>
+<div id=background_div>
+    <button id=background_button>Change image</button>
+</div>
+<div id='submit'>
+    <button type="submit">Submit</button>
 </div>
 {% endblock %}

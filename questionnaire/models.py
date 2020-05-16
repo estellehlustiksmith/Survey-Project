@@ -5,6 +5,8 @@ class Response(models.Model):
     question1 = models.CharField(max_length=1028)
     question2 = models.CharField(max_length=1028)
     question3 = models.CharField(max_length=1028)
+    question4 = models.CharField(max_length=1028)
+    question5 = models.CharField(max_length=1028)
 
     drawing = models.CharField(max_length=1000000000)
 

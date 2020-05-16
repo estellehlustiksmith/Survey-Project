@@ -27,12 +27,16 @@ button {
 }
 
 #submit{
-    padding-top: 20px;
+    padding-top: 55px;
 }
 
-#background_change {
+#background_button {
     background-color: rgba(128, 128, 128, 0.76);
     border: transparent;
+}
+
+#background_div {
+    padding-right: 120px;
 }
 
 a{
