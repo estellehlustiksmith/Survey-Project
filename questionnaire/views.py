@@ -1,8 +1,17 @@
 from django.shortcuts import render, redirect
 from .forms import ResponseForm
+from .forms import Consent
 
 def landing_page(request):
-    return render(request,'questionnaire/landing_page.html', {})
+    if request.method == 'POST':
+        form = Consent(request.POST)
+        if form.is_valid():
+            landing_page = form.save(commit=False)
+            landing_page.save()
+            return redirect('questionnaire')
+    else:
+        form = Consent()
+    return render(request,'questionnaire/landing_page.html', {'form': form})
 
 def response_form(request):
     #form = ResponseForm()

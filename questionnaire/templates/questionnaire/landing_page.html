@@ -4,20 +4,28 @@
     <div>
         <h1>Project Title</h1>
     </div>
-    <div>
-        <h2>consent </h2>
+    <div>        
+        <p>brief project intro why I am asking them to do the survey/information sheet and how the data might be used</p>
     </div>
     <div>
-        <p>brief project intro why I am asking them to do the survey</p>
+        <p>If you have any questions, during or after taking part in the survey please do not hestitate to contact me at:</p>
+        <p>email: estelle.hlustik-smith@st-annes.ox.ac.uk</p>
+        <p>tel:????</p>
     </div>
     <div>
-        <p>consent information
-        </p>
+        <h2>Participant consent form </h2>
     </div>
-    <div>
+    <div id='consent'>
+        <form method="POST" class="Consent">{% csrf_token %}
+            {{ form.as_p }}
+            </div>
+            <button type="submit">Accept and continue</button>
+        </form>
+    </div>
+    <!--<div>
         <button>
             <a href="{% url 'questionnaire' %}">Accept and continue</a>
-        </button>
+        </button> -->
         <!--<p><a href="{% url 'questionnaire' %}" class="internal_link" id="link_to_response_form">Accept and continue</a></p>-->
-    </div>
+    <!--</div> -->
 {% endblock %}
