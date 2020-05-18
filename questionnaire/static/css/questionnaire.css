@@ -1,7 +1,13 @@
-h1, h2 {
-    color: rgb(226, 106, 21);   
+h1 {
+    font-size: 17pt;   
+    color: rgb(21, 52, 226);
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
+h2 {
+    font-size: 14pt;
+}
 
 body {
     padding-left: 300px;
@@ -9,11 +15,19 @@ body {
     padding-top: 0px;
     padding-bottom: 0px;
     background-color: rgba(0, 183, 255, 0.308);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Calibri';
+}
+
+#oxford_logo {
+    padding-left: 20px;
+}
+
+#project_title {
+    text-align: center;
 }
 
 button {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Calibri';
     font-size: larger;  
     color: white;
     background-color: rgb(255, 208, 0);

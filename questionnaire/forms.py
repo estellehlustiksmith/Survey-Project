@@ -11,7 +11,7 @@ class ResponseForm(forms.ModelForm):
     question1 = forms.MultipleChoiceField(choices=OPTIONS, widget=forms.CheckboxSelectMultiple, required=True, label='Have you seen this work before')
     question2 = forms.CharField(label='If yes where from?')
     question3 = forms.CharField(label='What do you think the artwork is about?')
-    #question3 = forms.CharField(widget=forms.TextInput(attrs={'size':80}))
+    question4 = forms.CharField(widget=forms.TextInput(attrs={'size':80}))
     class Meta:
         model = Response
         fields = ('question1','question2','question3','question4','question5', 'drawing')

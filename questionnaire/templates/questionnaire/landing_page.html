@@ -1,8 +1,20 @@
 {% extends 'questionnaire/base.html' %}
+{% load static %}
 
 {% block body %}
+    <div id='logos'>
+        <img src= "{% static 'questionnaire/geography_logo.jpg' %}" height="70">       
+        <img id='oxford_logo' src= "{% static 'questionnaire/oxford_logo.jpg' %}", alt="Oxford Logo" height="75">
+    </div>
+    <div id='project_title'>
+        <h1>Taking street art out of the street: the transformation of the playful politics of place</h1>
+    </div>
+    <div id='contact_info'>
+        <p>Estelle Hlustik-Smith BA Geography student <br> estelle.hlustik-smith@st-annes.ox.ac.uk</p>
+    </div>
     <div>
-        <h1>Project Title</h1>
+        <h2>Participant Information</h2>
+        <p>Ethics Approval Reference: [Insert]</p>
     </div>
     <div>        
         <p>brief project intro why I am asking them to do the survey/information sheet and how the data might be used</p>
