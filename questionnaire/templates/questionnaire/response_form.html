@@ -11,34 +11,89 @@
             <canvas id="canvas"></canvas>
         </div>
     </form>
+    <div id='clear'>
+        <button onclick="clearCanvas()">Clear</button>
+    </div>
+    <div id=change_background>
+        <button id=change_background_btn, onclick="changeBackground()">Change image</button>
+    </div>
+    <div id='submit'>
+        <button type="submit">Submit</button>
+    </div>
     <script>
+        var images = [
+            '{% static "questionnaire/canvas_background.jpg" %}',
+            '{% static "questionnaire/canvas_background1.jpg" %}',
+            '{% static "questionnaire/canvas_background2.jpg" %}',
+            '{% static "questionnaire/canvas_background3.jpg" %}'
+        ]
+
+        function preloadImages(array) {
+            var count = 0;
+            if (!preloadImages.list) {
+                preloadImages.list = [];
+            }
+            var list = preloadImages.list;
+            for (var i = 0; i < array.length; i++) {
+                var img = new Image();
+                img.onload = function() {
+                    count += 1;
+                    if (count == array.length) {
+                        setBackground('{% static "questionnaire/canvas_background.jpg" %}')
+                    }
+                }
+                list.push(img);
+                img.src = array[i];
+            }    
+        }
+
+        preloadImages(images);
+
         var drawing_field = document.getElementById("id_drawing");
         // get canvas
         var canvas = document.getElementById("canvas")
 
         // get canvas 2D context and set him correct size
         var ctx = canvas.getContext('2d');
-        ctx.canvas.width = canvas.width;
-        ctx.canvas.height = canvas.height;
 
-        var background = new Image();
-
-        background.onload = function(){
-            ctx.drawImage(background,0,0);   
-        };
-        background.src = '{% static "questionnaire/canvas_background.jpg" %}';
-
-        canvas.width = background.width;
-        canvas.height = background.height;
+        var background_num = 0;
 
         // last known position
         var pos = { x: 0, y: 0 };
 
         document.addEventListener('mousemove', draw);
         document.addEventListener('mousedown', setPosition);
-        document.addEventListener('mouseup', save)
+        document.addEventListener('mouseup', save);
         document.addEventListener('mouseenter', setPosition);
-        document.addEventListener('mouseleave', save)
+        document.addEventListener('mouseleave', save);
+
+        function changeBackground() {
+            background_num += 1;
+            if (background_num == images.length) {
+                background_num = 0;
+            }
+
+            setBackground(images[background_num]);
+        }
+
+        function clearCanvas() {
+            setBackground(images[background_num]);
+        }
+
+        function setBackground(url) {
+            var background = new Image();
+
+            background.onload = function(){
+                ctx.drawImage(background,0,0);   
+            };
+            background.src = url;
+
+            canvas.width = background.width;
+            canvas.height = background.height;
+
+            ctx.canvas.width = canvas.width;
+            ctx.canvas.height = canvas.height;
+        }
 
         // new position from mouse event
         function setPosition(e) {
@@ -71,15 +126,6 @@
 
             drawing_field.value = img_data;
         }
+
     </script>
-    
-<div id='reset'>
-    <button>Reset</button>
-</div>
-<div id=background_div>
-    <button id=background_button>Change image</button>
-</div>
-<div id='submit'>
-    <button type="submit">Submit</button>
-</div>
 {% endblock %}
