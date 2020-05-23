@@ -18,6 +18,7 @@ class ResponseForm(forms.ModelForm):
         widgets = {'drawing': forms.HiddenInput()}#
 
 class Consent(forms.ModelForm):
+    consent0 = forms.BooleanField(required = True, label='I am over 18 years old.')
     consent1 = forms.BooleanField(required = True, label='I confirm that I have read and understand the information for the above study. I have had the opportunity to consider the information, ask questions and have had these answered satisfactorily.')
     consent2 = forms.BooleanField(required = True, label='I understand that my participation is voluntary and that I am free to withdraw at any time, without giving any reason, and without any adverse consequences or academic penalty.')
     consent3 = forms.BooleanField(required = True, label='I understand that research data collected during the study may be looked at by designated individuals from the University of Oxford where it is relevant to my taking part in this study. I give permission for these individuals to access my data.')
@@ -28,4 +29,4 @@ class Consent(forms.ModelForm):
     consent8 = forms.BooleanField(required = True, label='I agree to take part in the study.')
     class Meta:
         model = Consent
-        fields=('consent1','consent2','consent3','consent4','consent5','consent6','consent7','consent8')
+        fields=('consent0','consent1','consent2','consent3','consent4','consent5','consent6','consent7','consent8')

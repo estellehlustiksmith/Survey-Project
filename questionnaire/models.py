@@ -11,6 +11,7 @@ class Response(models.Model):
     drawing = models.CharField(max_length=1000000000)
 
 class Consent(models.Model):
+    consent0 = models.BooleanField()
     consent1 = models.BooleanField()
     consent2 = models.BooleanField()
     consent3 = models.BooleanField()

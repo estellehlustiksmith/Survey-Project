@@ -28,4 +28,7 @@ def response_form(request):
 
 def ty_form_complete(request):
     return render(request,'questionnaire/ty_form_complete.html', {})
+
+def interview(request):
+    return render(request,'questionnaire/interview.html', {})
 # Create your views here.
