@@ -1,6 +1,7 @@
 from django import forms
 from .models import Response
 from .models import Consent
+from .models import Interview
 
 class ResponseForm(forms.ModelForm):
     NUMBERS = [('1','1'),('2','2'),('3','3'),('4','4'),('5','5')]
@@ -16,7 +17,6 @@ class ResponseForm(forms.ModelForm):
     question3 = forms.CharField(label='If yes what do you know about it?',
         widget=forms.Textarea(attrs={'rows':10,'cols':70}))
         
-    #question4 = forms.CharField(label='What do you think the artwork is about?')
     question4 = forms.CharField(widget=forms.Textarea(attrs={'rows':10,'cols':70}))
     class Meta:
         model = Response
@@ -36,3 +36,12 @@ class Consent(forms.ModelForm):
     class Meta:
         model = Consent
         fields=('consent0','consent1','consent2','consent3','consent4','consent5','consent6','consent7','consent8')
+
+class Interview(forms.ModelForm):
+    over18 = forms.BooleanField(required = True, label='I am over 18 years old.')
+    email = forms.CharField(label='Email:',
+        widget=forms.TextInput(attrs={'size':60}))
+    class Meta:
+        model = Interview
+        fields=('over18','email')
+        

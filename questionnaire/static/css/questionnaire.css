@@ -1,3 +1,4 @@
+/*General*/
 h1 {
     font-size: 17pt;   
     color: rgb(21, 52, 226);
@@ -51,6 +52,23 @@ button {
     padding-left: 10px;
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
+#white_center {
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    padding-right: 50px;
+}
+
+
+
+/*landing page*/
 #link_to_interview{
     height: 42px;
     margin-top: -55px;
@@ -67,52 +85,6 @@ button {
 #interview_text{
     padding-right: 110px;
 }
-
-li{
-    list-style-type: none;
-    list-style: none;
-}
-
-#submit{
-    padding-top: 55px;
-}
-
-#background_button {
-    background-color: rgba(128, 128, 128, 0.76);
-    border: transparent;
-}
-
-#change_background {
-    padding-right: 120px;
-}
-
-a{
-    color: white;
-    text-decoration: none;
-}
-
-#white_center {
-    background-color: white;
-    border-radius: 10px;
-    padding-left: 40px;
-    padding-top: 30px;
-    padding-bottom: 60px;
-    padding-right: 50px;
-}
-
-/*#canvas {
-    margin-left: 10px;
-    margin-top: 10px;
-    max-width: 97%;
-    height: auto;
-    border: thin solid #000000;
-}*/
-#canvas {
-    margin-left: 10px;
-    margin-top: 10px;
-    border: thin solid #000000;
-}
-
 
 
 #consent {
@@ -160,4 +132,43 @@ a{
 #id_consent8 {
     position: absolute;
     right: 400px;
+}
+
+/*questionnaire*/
+li{
+    list-style-type: none;
+    list-style: none;
+}
+
+#submit{
+    padding-top: 55px;
+}
+
+#background_button {
+    background-color: rgba(128, 128, 128, 0.76);
+    border: transparent;
+}
+
+#change_background {
+    padding-right: 120px;
+}
+
+/*#canvas {
+    margin-left: 10px;
+    margin-top: 10px;
+    max-width: 97%;
+    height: auto;
+    border: thin solid #000000;
+}*/
+#canvas {
+    margin-left: 10px;
+    margin-top: 10px;
+    border: thin solid #000000;
+}
+
+
+/*Thank you*/
+#thank_you{
+    text-align: center;
+    font-size: 16pt;
 }

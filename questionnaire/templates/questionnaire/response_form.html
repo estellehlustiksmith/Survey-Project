@@ -2,11 +2,17 @@
 {% load static %}
 
 {% block body %}
+    <div id='project_title'>
+        <h1>The removal of street art from the street: <br>the transformation of the playful politics of place</h1>
+    </div>    
     <p>To what extend do you agree with each statement. Please rank on a scale of 1 to 5, with 1 being not at all and 5 being fully.</p>
     <form method="POST" class="ResponseForm">{% csrf_token %}
         {{ form.as_p }}
         <div id="canvas-holder">
             <canvas id="canvas"></canvas>
+        </div>
+        <div id='submit'>
+            <button type="submit">Submit</button>
         </div>
     </form>
     <div id='clear'>
@@ -14,9 +20,6 @@
     </div>
     <div id=change_background>
         <button id=change_background_btn, onclick="changeBackground()">Change image</button>
-    </div>
-    <div id='submit'>
-        <button type="submit">Submit</button>
     </div>
     <script>
         var images = [

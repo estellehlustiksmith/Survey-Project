@@ -20,3 +20,7 @@ class Consent(models.Model):
     consent6 = models.BooleanField()
     consent7 = models.BooleanField()
     consent8 = models.BooleanField()
+
+class Interview(models.Model):
+    over18 = models.BooleanField()
+    email = models.CharField(max_length=1028)
