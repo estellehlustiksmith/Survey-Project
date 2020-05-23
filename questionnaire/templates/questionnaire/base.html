@@ -8,6 +8,17 @@
     </head>
     <body>
         <div id='white_center'>
+            <div id='logos'>
+                <img src= "{% static 'questionnaire/geography_logo.jpg' %}" height="70">       
+                <img id='oxford_logo' src= "{% static 'questionnaire/oxford_logo.jpg' %}", alt="Oxford Logo" height="75">
+            </div>
+            <div id='contact_info'>
+                <p id='my_name'>Estelle Hlustik-Smith</p>
+                <p id='my_email'>estelle.hlustik-smith@st-annes.ox.ac.uk</p>
+            </div>
+            <div id='project_title'>
+                <h1>The removal of street art from the street: <br>the transformation of the playful politics of place</h1>
+            </div>
             {% block body %}
             {% endblock %}
         </div>

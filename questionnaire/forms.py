@@ -3,12 +3,8 @@ from .models import Response
 from .models import Consent
 
 class ResponseForm(forms.ModelForm):
-    OPTIONS = (
-        ("a","Yes"),
-        ("b","No"),
-        ("c","I don't know")
-        )
-    question1 = forms.MultipleChoiceField(choices=OPTIONS, widget=forms.CheckboxSelectMultiple, required=True, label='Have you seen this work before')
+    CHOICES = [('Y','Yes'),('N','No'),('IDK',"I don't know")]
+    question1 = forms.CharField(label='Are you familiar with this artwork or the artist?', widget=forms.RadioSelect(choices=CHOICES))
     question2 = forms.CharField(label='If yes where from?')
     question3 = forms.CharField(label='What do you think the artwork is about?')
     question4 = forms.CharField(widget=forms.TextInput(attrs={'size':80}))

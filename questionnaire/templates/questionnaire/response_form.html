@@ -2,9 +2,6 @@
 {% load static %}
 
 {% block body %}
-    <div>
-        <h1>Taking street art out of the street: the transformation of the playful politics of place</h1>
-    </div>
     <form method="POST" class="ResponseForm">{% csrf_token %}
         {{ form.as_p }}
         <div id="canvas-holder">
