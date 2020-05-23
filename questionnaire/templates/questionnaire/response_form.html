@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block body %}
+    <p>To what extend do you agree with each statement. Please rank on a scale of 1 to 5, with 1 being not at all and 5 being fully.</p>
     <form method="POST" class="ResponseForm">{% csrf_token %}
         {{ form.as_p }}
         <div id="canvas-holder">

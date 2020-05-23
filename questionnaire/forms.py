@@ -3,11 +3,21 @@ from .models import Response
 from .models import Consent
 
 class ResponseForm(forms.ModelForm):
+    NUMBERS = [('1','1'),('2','2'),('3','3'),('4','4'),('5','5')]
+    question1 = forms.CharField(
+        label='I enjoy looking at art.',
+        widget=forms.RadioSelect(choices=NUMBERS))
+    
     CHOICES = [('Y','Yes'),('N','No'),('IDK',"I don't know")]
-    question1 = forms.CharField(label='Are you familiar with this artwork or the artist?', widget=forms.RadioSelect(choices=CHOICES))
-    question2 = forms.CharField(label='If yes where from?')
-    question3 = forms.CharField(label='What do you think the artwork is about?')
-    question4 = forms.CharField(widget=forms.TextInput(attrs={'size':80}))
+    question2 = forms.CharField(
+        label='Are you familiar with this artwork or the artist?', 
+        widget=forms.RadioSelect(choices=CHOICES))
+    
+    question3 = forms.CharField(label='If yes what do you know about it?',
+        widget=forms.Textarea(attrs={'rows':10,'cols':70}))
+        
+    #question4 = forms.CharField(label='What do you think the artwork is about?')
+    question4 = forms.CharField(widget=forms.Textarea(attrs={'rows':10,'cols':70}))
     class Meta:
         model = Response
         fields = ('question1','question2','question3','question4','question5', 'drawing')
