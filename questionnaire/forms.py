@@ -15,9 +15,9 @@ class ResponseForm(forms.ModelForm):
         widget=forms.RadioSelect(choices=CHOICES))
     
     question3 = forms.CharField(label='If yes what do you know about it?',
-        widget=forms.Textarea(attrs={'rows':10,'cols':70}))
+        widget=forms.Textarea(attrs={'rows':10,'cols':60}))
         
-    question4 = forms.CharField(widget=forms.Textarea(attrs={'rows':10,'cols':70}))
+    question4 = forms.CharField(widget=forms.Textarea(attrs={'rows':10,'cols':60}))
     class Meta:
         model = Response
         fields = ('question1','question2','question3','question4','question5', 'drawing')
