@@ -8,6 +8,10 @@
     <p>To what extend do you agree with each statement. Please rank on a scale of 1 to 5, with 1 being not at all and 5 being fully.</p>
     <form method="POST" class="ResponseForm">{% csrf_token %}
         {{ form.as_p }}
+        <p>Draw a frame around what you think encompasses the artwork or where the boundary of the artwork might be. 
+            <br>You can use the ‘Change background’ button to decide what image of the artwork to use. 
+            <br>Draw by clicking and dragging your mouse. If you wish to reset the image, click the ‘Clear’ button. (An example of this question is below
+            </p>
         <div id="canvas-holder">
             <canvas id="canvas"></canvas>
         </div>

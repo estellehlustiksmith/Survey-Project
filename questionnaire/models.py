@@ -7,6 +7,12 @@ class Response(models.Model):
     question3 = models.CharField(max_length=1028)
     question4 = models.CharField(max_length=1028)
     question5 = models.CharField(max_length=1028)
+    question6 = models.CharField(max_length=1028)
+    question7 = models.CharField(max_length=1028)
+    question8 = models.CharField(max_length=1028)
+    question9 = models.CharField(max_length=1028)
+    question10 = models.CharField(max_length=1028)
+    question11 = models.CharField(max_length=1028)
 
     drawing = models.CharField(max_length=1000000000)
 

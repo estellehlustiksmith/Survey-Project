@@ -8,19 +8,50 @@ class ResponseForm(forms.ModelForm):
     question1 = forms.CharField(
         label='I enjoy looking at art.',
         widget=forms.RadioSelect(choices=NUMBERS))
-    
-    CHOICES = [('Y','Yes'),('N','No'),('IDK',"I don't know")]
+
     question2 = forms.CharField(
+        label='In my spare time I attend art or art history events.',
+        widget=forms.RadioSelect(choices=NUMBERS))
+    
+    question3 = forms.CharField(
+        label='I enjoy looking at street art.',
+        widget=forms.RadioSelect(choices=NUMBERS))
+
+    question4 = forms.CharField(
+    label='Mostly when I see street art, I am pleased.',
+    widget=forms.RadioSelect(choices=NUMBERS))
+
+    question5 = forms.CharField(
+    label='I think that street art should be removed from the streets.',
+    widget=forms.RadioSelect(choices=NUMBERS))
+
+    CHOICES = [('Y','Yes'),('N','No'),('IDK',"I don't know")]
+    question6 = forms.CharField(
         label='Are you familiar with this artwork or the artist?', 
         widget=forms.RadioSelect(choices=CHOICES))
     
-    question3 = forms.CharField(label='If yes what do you know about it?',
+    question7 = forms.CharField(label='If yes what do you know about it?',
+        widget=forms.Textarea(attrs={'rows':10,'cols':60}))
+    
+    question8 = forms.CharField(
+        label='Describe your reaction to the artwork. What do you think it is about? How does it make you feel? Or if you prefer, write the first three words which spring to mind.',
         widget=forms.Textarea(attrs={'rows':10,'cols':60}))
         
-    question4 = forms.CharField(widget=forms.Textarea(attrs={'rows':10,'cols':60}))
+    question9 = forms.CharField(
+        label='Why did you draw the boundary here? Why did you choose this background image? Is there an element of the work you were unable to draw around that you feel should have been included within this frame?',
+        widget=forms.Textarea(attrs={'rows':10,'cols':60}))
+
+    question10= forms.CharField(
+        label='How do you now feel about the artwork? Or if you prefer, write the first three words which spring to mind.',
+        widget=forms.Textarea(attrs={'rows':10,'cols':60}))
+
+    question11= forms.CharField(
+    label='Would you change where you would draw the frame encompassing the artwork? Why?',
+        widget=forms.Textarea(attrs={'rows':10,'cols':60}))
+
     class Meta:
         model = Response
-        fields = ('question1','question2','question3','question4','question5', 'drawing')
+        fields = ('question1','question2','question3','question4','question5','question6','question7','question8','question9','question10','question11','drawing')
         widgets = {'drawing': forms.HiddenInput()}#
 
 class Consent(forms.ModelForm):
