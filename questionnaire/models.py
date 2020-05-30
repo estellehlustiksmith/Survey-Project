@@ -7,8 +7,6 @@ class Response(models.Model):
     question1_3 = models.CharField(max_length=1028)
     question1_4 = models.CharField(max_length=1028)
     question1_5 = models.CharField(max_length=1028)
-
-class Building(models.Model):
     question6 = models.CharField(max_length=1028)
     question7 = models.CharField(max_length=1028)
     question8 = models.CharField(max_length=1028)

@@ -2,11 +2,11 @@ from django import forms
 from .models import Response
 from .models import Consent
 from .models import Interview
-from .models import Building
+#from .models import Building
 
 #Branch
 
-class ResponseForm(forms.ModelForm):
+class Response(forms.ModelForm):
     NUMBERS = [('1','1'),('2','2'),('3','3'),('4','4'),('5','5')]
     question1_1 = forms.CharField(
         label='I enjoy looking at art.',
@@ -28,11 +28,6 @@ class ResponseForm(forms.ModelForm):
         label='I think that street art should be removed from the streets.',
         widget=forms.RadioSelect(choices=NUMBERS))
 
-    class Meta:
-        model = Response
-        fields = ('question1_1','question1_2','question1_3','question1_4','question1_5')
-
-class Building(forms.ModelForm):
     CHOICES = [('Y','Yes'),('N','No'),('IDK',"I don't know")]
     question6 = forms.CharField(
         label='Are you familiar with this artwork or the artist?', 
@@ -58,8 +53,8 @@ class Building(forms.ModelForm):
         widget=forms.Textarea(attrs={'rows':10,'cols':60}))
 
     class Meta:
-        model = Building
-        fields = ('question6','question7','question8','question9','question10','question11','drawing')
+        model = Response
+        fields = ('question1_1','question1_2','question1_3','question1_4','question1_5','question6','question7','question8','question9','question10','question11','drawing')
         widgets = {'drawing': forms.HiddenInput()}#
 
 class Consent(forms.ModelForm):
