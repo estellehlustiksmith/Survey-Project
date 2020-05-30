@@ -22,5 +22,6 @@ urlpatterns = [
     path( '', views.landing_page, name='landing_page'),
     path( 'interview',views.interview, name='interview'),
     path( 'questionnaire', views.response_form, name='questionnaire'),
+    path( 'building', views.building, name='building'),
     path( 'thankyou', views.ty_form_complete, name='thankyou')
 ]

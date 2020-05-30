@@ -2,29 +2,35 @@ from django import forms
 from .models import Response
 from .models import Consent
 from .models import Interview
+from .models import Building
 
 class ResponseForm(forms.ModelForm):
     NUMBERS = [('1','1'),('2','2'),('3','3'),('4','4'),('5','5')]
-    question1 = forms.CharField(
+    question1_1 = forms.CharField(
         label='I enjoy looking at art.',
         widget=forms.RadioSelect(choices=NUMBERS))
 
-    question2 = forms.CharField(
+    question1_2 = forms.CharField(
         label='In my spare time I attend art or art history events.',
         widget=forms.RadioSelect(choices=NUMBERS))
     
-    question3 = forms.CharField(
+    question1_3 = forms.CharField(
         label='I enjoy looking at street art.',
         widget=forms.RadioSelect(choices=NUMBERS))
 
-    question4 = forms.CharField(
-    label='Mostly when I see street art, I am pleased.',
-    widget=forms.RadioSelect(choices=NUMBERS))
+    question1_4 = forms.CharField(
+        label='Mostly when I see street art, I am pleased.',
+        widget=forms.RadioSelect(choices=NUMBERS))
 
-    question5 = forms.CharField(
-    label='I think that street art should be removed from the streets.',
-    widget=forms.RadioSelect(choices=NUMBERS))
+    question1_5 = forms.CharField(
+        label='I think that street art should be removed from the streets.',
+        widget=forms.RadioSelect(choices=NUMBERS))
 
+    class Meta:
+        model = Response
+        fields = ('question1_1','question1_2','question1_3','question1_4','question1_5')
+
+class Building(forms.ModelForm):
     CHOICES = [('Y','Yes'),('N','No'),('IDK',"I don't know")]
     question6 = forms.CharField(
         label='Are you familiar with this artwork or the artist?', 
@@ -32,7 +38,7 @@ class ResponseForm(forms.ModelForm):
     
     question7 = forms.CharField(label='If yes what do you know about it?',
         widget=forms.Textarea(attrs={'rows':10,'cols':60}))
-    
+
     question8 = forms.CharField(
         label='Describe your reaction to the artwork. What do you think it is about? How does it make you feel? Or if you prefer, write the first three words which spring to mind.',
         widget=forms.Textarea(attrs={'rows':10,'cols':60}))
@@ -46,12 +52,12 @@ class ResponseForm(forms.ModelForm):
         widget=forms.Textarea(attrs={'rows':10,'cols':60}))
 
     question11= forms.CharField(
-    label='Would you change where you would draw the frame encompassing the artwork? Why?',
+        label='Would you change where you would draw the frame encompassing the artwork? Why?',
         widget=forms.Textarea(attrs={'rows':10,'cols':60}))
 
     class Meta:
-        model = Response
-        fields = ('question1','question2','question3','question4','question5','question6','question7','question8','question9','question10','question11','drawing')
+        model = Building
+        fields = ('question6','question7','question8','question9','question10','question11','drawing')
         widgets = {'drawing': forms.HiddenInput()}#
 
 class Consent(forms.ModelForm):

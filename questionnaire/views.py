@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import ResponseForm
 from .forms import Consent
 from .forms import Interview
+from .forms import Building
 
 def landing_page(request):
     if request.method == 'POST':
@@ -21,11 +22,22 @@ def response_form(request):
         if form.is_valid():
             questionnaire = form.save(commit=False)
             questionnaire.save()
-            return redirect('thankyou')
+            return redirect('building')
           
     else:
         form = ResponseForm()
     return render(request, 'questionnaire/response_form.html', {'form': form})
+
+def building(request):
+    if request.method == "POST":
+        form = Building(request.POST)
+        if form.is_valid():
+            building = form.save(commit=False)
+            building.save()
+            return redirect('ty_form_complete')
+    else:
+        form = Building()
+    return render(request, 'questionnaire/building.html', {'form':form})
 
 def ty_form_complete(request):
     return render(request,'questionnaire/ty_form_complete.html', {})

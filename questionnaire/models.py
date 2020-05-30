@@ -2,11 +2,13 @@ from django.db import models
 
 # Create your models here.
 class Response(models.Model):
-    question1 = models.CharField(max_length=1028)
-    question2 = models.CharField(max_length=1028)
-    question3 = models.CharField(max_length=1028)
-    question4 = models.CharField(max_length=1028)
-    question5 = models.CharField(max_length=1028)
+    question1_1 = models.CharField(max_length=1028)
+    question1_2 = models.CharField(max_length=1028)
+    question1_3 = models.CharField(max_length=1028)
+    question1_4 = models.CharField(max_length=1028)
+    question1_5 = models.CharField(max_length=1028)
+
+class Building(models.Model):
     question6 = models.CharField(max_length=1028)
     question7 = models.CharField(max_length=1028)
     question8 = models.CharField(max_length=1028)
