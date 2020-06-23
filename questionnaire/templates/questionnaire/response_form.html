@@ -9,10 +9,8 @@
     </script>
     <div>
         <form method="POST" class="ResponseForm">{% csrf_token %}
-            <button type="button" onclick="QuestionsB()">Next Question</button>
             {{ form.as_p }}
             </div>
-            <button type="submit">Next Questions???</button>
         <p>Draw a frame around what you think encompasses the artwork or where the boundary of the artwork might be. 
             <br>You can use the ‘Change background’ button to decide what image of the artwork to use. 
             <br>Draw by clicking and dragging your mouse. If you wish to reset the image, click the ‘Clear’ button. (An example of this question is below
@@ -21,14 +19,15 @@
             <canvas id="canvas"></canvas>
         </div>
         <div id='submit'>
-            <button type="submit">Submit</button>
+            <button id="submit_btn", type="submit">Submit</button>
         </div>
+        <button type="button" onclick="SectionC()">Next Question</button>
     </form>
     <div id='clear'>
-        <button onclick="clearCanvas()">Clear</button>
+        <button id="clear_btn", onclick="clearCanvas()">Clear</button>
     </div>
     <div id=change_background>
-        <button id=change_background_btn, onclick="changeBackground()">Change image</button>
+        <button id="change_background_btn", onclick="changeBackground()">Change image</button>
     </div>
     <script type="text/javascript" src="{% static 'js/question_script.js' %}"></script>
     <script>
