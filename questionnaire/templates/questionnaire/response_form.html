@@ -7,28 +7,31 @@
     </div>    
     <p id='test'>To what extend do you agree with each statement. Please rank on a scale of 1 to 5, with 1 being not at all and 5 being fully.</p>
     </script>
-    <div>
-        <form method="POST" class="ResponseForm">{% csrf_token %}
-            {{ form.as_p }}
-            </div>
-        <p>Draw a frame around what you think encompasses the artwork or where the boundary of the artwork might be. 
-            <br>You can use the ‘Change background’ button to decide what image of the artwork to use. 
-            <br>Draw by clicking and dragging your mouse. If you wish to reset the image, click the ‘Clear’ button. (An example of this question is below
-            </p>
-        <div id="canvas-holder">
-            <canvas id="canvas"></canvas>
-        </div>
-        <div id='submit'>
-            <button id="submit_btn", type="submit">Submit</button>
-        </div>
-        <button type="button" onclick="SectionC()">Next Question</button>
-    </form>
+    <p id="canvas_p">Draw a frame around what you think encompasses the artwork or where the boundary of the artwork might be. 
+        <br>You can use the ‘Change background’ button to decide what image of the artwork to use. 
+        <br>Draw by clicking and dragging your mouse. If you wish to reset the image, click the ‘Clear’ button. (An example of this question is below
+        </p>
+    <div id="canvas-holder">
+        <canvas id="canvas"></canvas>
+    </div>
     <div id='clear'>
         <button id="clear_btn", onclick="clearCanvas()">Clear</button>
     </div>
     <div id=change_background>
         <button id="change_background_btn", onclick="changeBackground()">Change image</button>
     </div>
+    <img id="building_img" scr="{% static 'questionnaire/building.jpg' %}" alt="building">
+    <div>
+        <form method="POST" class="ResponseForm">{% csrf_token %}
+            {{ form.as_p }}
+            </div>
+        <div id='submit'>
+            <button id="submit_btn", type="submit">Submit</button>
+        </div>
+        <button id="sectionb1_btn", type="button" onclick="SectionB1()">Next Question</button>
+        <button id="sectionb2_btn", type="button" onclick="SectionB2()">Next Question</button>
+        <button id="sectionb3_btn", type="button" onclick="SectionB3()">Next Question</button>
+    </form>
     <script type="text/javascript" src="{% static 'js/question_script.js' %}"></script>
     <script>
         var images = [
