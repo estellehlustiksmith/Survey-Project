@@ -14,6 +14,11 @@ class Response(models.Model):
     questionB1_5 = models.CharField(max_length=1028)
     questionB1_6 = models.CharField(max_length=1028)
     questionB1_7 = models.CharField(max_length=1028)
+    questionB1_8 = models.CharField(max_length=1028)
+    questionB1_9 = models.CharField(max_length=1028)
+    questionB1_10 = models.CharField(max_length=1028)
+    questionB1_11 = models.CharField(max_length=1028)
+    questionB1_12 = models.CharField(max_length=1028)
 
     drawing = models.CharField(max_length=1000000000)
 

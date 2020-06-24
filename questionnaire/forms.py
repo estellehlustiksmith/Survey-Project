@@ -63,9 +63,34 @@ class Response(forms.ModelForm):
         label='How do you now feel about the artwork? Or if you prefer, write the first three words which spring to mind.',
         widget=forms.Textarea(attrs={'rows':10,'cols':60}))
 
+#SectionB4
+    #image of auction
+    questionB1_8 = forms.CharField(
+        label='How do you know feel about the artwork in its gallery setting? Or if you prefer, write the first three words which spring to mind.',
+        widget=forms.Textarea(attrs={'rows':10,'cols':60}))
+    #auction canvas p
+    #auction canvas
+
+#SectionB5
+    questionB1_9 = forms.CharField(
+        label='To what extent do you think the meaning and political associations of the piece might have changed now it’s no longer on the street? ',
+        widget=forms.Textarea(attrs={'rows':10,'cols':60}))
+
+    questionB1_10 = forms.CharField(
+        label='What do you think should happen to street art when the building needs to be demolished? Do you think what happened in this case was the best solution? Why?',
+        widget=forms.Textarea(attrs={'rows':10,'cols':60}))
+
+    questionB1_11 = forms.CharField(
+        label='Why do you think it sold for so much? Do you think it was worth that price?',
+        widget=forms.Textarea(attrs={'rows':10,'cols':60}))
+
+    questionB1_12 = forms.CharField(
+        label='If you have any further comments about the topic, please leave them here:',
+        widget=forms.Textarea(attrs={'rows':10,'cols':60}))
+
     class Meta:
         model = Response
-        fields = ('questionA_1','questionA_2','questionA_3','questionA_4','questionA_5','questionB1_1','questionB1_2','questionB1_3','questionB1_4','questionB1_5','questionB1_6','questionB1_7','drawing')
+        fields = ('questionA_1','questionA_2','questionA_3','questionA_4','questionA_5','questionB1_1','questionB1_2','questionB1_3','questionB1_4','questionB1_5','questionB1_6','questionB1_7','questionB1_8','questionB1_9','questionB1_10','questionB1_11','questionB1_12','drawing')
         widgets = {'drawing': forms.HiddenInput()}#
 
 class Consent(forms.ModelForm):
