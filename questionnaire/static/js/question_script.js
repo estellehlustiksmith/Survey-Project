@@ -1,9 +1,9 @@
 var paragraphs = document.getElementsByTagName("p");
 console.log(paragraphs);
 
-//Section B1. This is hiding all paragraphs which are 13 or greater
+//Section A. This is hiding all paragraphs which are 13 or greater
 var i;
-for (i=13; i < paragraphs.length; i++) {
+for (i=15; i < paragraphs.length; i++) {
     paragraphs[i].style.display = "none";
 };
 document.getElementById("id_questionB1_1").style.display= "none";
@@ -15,8 +15,9 @@ document.getElementById("canvas_p").style.display= "none";
 document.getElementById("building_img").style.display= "none";
 document.getElementById("sectionb2_btn").style.display= "none";
 document.getElementById("sectionb3_btn").style.display= "none";
+document.getElementById("canvas_p2").style.display= "none";
 
-//Section B2 This is hiding all the paragraphs which are 2 or greater. 
+//Section B1 This is hiding all the paragraphs which are 2 or greater. 
 //Then bringing back all those which are 13 and greater.
 //Then hide all the ones over 18
 function SectionB1() {
@@ -24,7 +25,7 @@ function SectionB1() {
     for (i=2; i <  paragraphs.length; i++) {
         paragraphs[i].style.display = "none";
     };
-    for (i=13; i < paragraphs.length; i++) {
+    for (i=15; i < paragraphs.length; i++) {
         paragraphs[i].style.display = "block";
     };
     for (i=18;  i < paragraphs.length; i++) {
@@ -72,4 +73,6 @@ function SectionB3() {
     for (i=19; i < paragraphs.length; i++) {
         paragraphs[i].style.display = "block";
     };
+    document.getElementById("canvas_p2").style.display= "block";
+    document.getElementById("canvas_p").style.display= "none";
 }
