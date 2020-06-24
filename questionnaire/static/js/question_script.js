@@ -24,6 +24,7 @@ document.getElementById("canvas_p2").style.display= "none";
 //Then hide all the ones over 18
 function SectionB1() {
     document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
     var i;
     for (i=2; i <  paragraphs.length; i++) {
         paragraphs[i].style.display = "none";
@@ -49,6 +50,7 @@ function SectionB1() {
 
 function SectionB2() {
     document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
     var i;
     for (i=2; i <  paragraphs.length; i++) {
         paragraphs[i].style.display = "none";
@@ -71,6 +73,7 @@ function SectionB2() {
 
 function SectionB3() {
     document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
     var i;
     for (i=2; i <  paragraphs.length; i++) {
         paragraphs[i].style.display = "none";
@@ -89,6 +92,7 @@ function SectionB3() {
 
 function SectionB4() {
     document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
     var i;
     for (i=2; i <  paragraphs.length; i++) {
         paragraphs[i].style.display = "none";
@@ -106,6 +110,7 @@ function SectionB4() {
 
 function SectionB5() {
     document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
     var i;
     for (i=2; i <  paragraphs.length; i++) {
         paragraphs[i].style.display = "none";
