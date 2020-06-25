@@ -27,29 +27,61 @@ document.getElementById("canvas_p2").style.display= "none";
 //Then bringing back all those which are 13 and greater.
 //Then hide all the ones over 18
 function SectionB1() {
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-    var i;
-    for (i=2; i <  paragraphs.length; i++) {
-        paragraphs[i].style.display = "none";
-    };
-    for (i=15; i < paragraphs.length; i++) {
-        paragraphs[i].style.display = "block";
-    };
-    for (i=18;  i < paragraphs.length; i++) {
-        paragraphs[i].style.display = "none";
-    };
-    document.getElementById("id_questionB1_1").style.display= "block";
-    document.getElementById("building_img").style.display= "block";
-    document.getElementById("sectionb2_btn").style.display= "block";
-    document.getElementById("canvas").style.display= "none";
-    document.getElementById("id_questionA_1").style.display= "none";
-    document.getElementById("id_questionA_2").style.display= "none";
-    document.getElementById("id_questionA_3").style.display= "none";
-    document.getElementById("id_questionA_4").style.display= "none";
-    document.getElementById("id_questionA_5").style.display= "none";
-    document.getElementById("sectionb1_btn").style.display= "none";
-   // paragraphs[3].style.display = "none";
+    if ((((((document.getElementById("id_questionA_1_0").checked) 
+    || (document.getElementById("id_questionA_1_1").checked)
+    || (document.getElementById("id_questionA_1_2").checked)  
+    || (document.getElementById("id_questionA_1_3").checked)  
+    || (document.getElementById("id_questionA_1_4").checked)  
+    || (document.getElementById("id_questionA_1_5").checked))
+    && ((document.getElementById("id_questionA_2_0").checked)
+    || (document.getElementById("id_questionA_2_1").checked)
+    || (document.getElementById("id_questionA_2_2").checked)
+    || (document.getElementById("id_questionA_2_3").checked)
+    || (document.getElementById("id_questionA_2_4").checked)
+    || (document.getElementById("id_questionA_2_5").checked)))
+    && ((document.getElementById("id_questionA_3_0").checked)
+    || (document.getElementById("id_questionA_3_1").checked)
+    || (document.getElementById("id_questionA_3_2").checked)
+    || (document.getElementById("id_questionA_3_3").checked)
+    || (document.getElementById("id_questionA_3_4").checked)
+    || (document.getElementById("id_questionA_3_5").checked)))
+    && ((document.getElementById("id_questionA_4_0").checked)
+    || (document.getElementById("id_questionA_4_1").checked)
+    || (document.getElementById("id_questionA_4_2").checked)
+    || (document.getElementById("id_questionA_4_3").checked)
+    || (document.getElementById("id_questionA_4_4").checked)
+    || (document.getElementById("id_questionA_4_5").checked)))
+    && ((document.getElementById("id_questionA_5_0").checked)
+    || (document.getElementById("id_questionA_5_1").checked)
+    || (document.getElementById("id_questionA_5_2").checked)
+    || (document.getElementById("id_questionA_5_3").checked)
+    || (document.getElementById("id_questionA_5_4").checked)
+    || (document.getElementById("id_questionA_5_5").checked)))
+    {
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        var i;
+        for (i=2; i <  paragraphs.length; i++) {
+            paragraphs[i].style.display = "none";
+        };
+        for (i=15; i < paragraphs.length; i++) {
+            paragraphs[i].style.display = "block";
+        };
+        for (i=18;  i < paragraphs.length; i++) {
+            paragraphs[i].style.display = "none";
+        };
+        document.getElementById("id_questionB1_1").style.display= "block";
+        document.getElementById("building_img").style.display= "block";
+        document.getElementById("sectionb2_btn").style.display= "block";
+        document.getElementById("canvas").style.display= "none";
+        document.getElementById("id_questionA_1").style.display= "none";
+        document.getElementById("id_questionA_2").style.display= "none";
+        document.getElementById("id_questionA_3").style.display= "none";
+        document.getElementById("id_questionA_4").style.display= "none";
+        document.getElementById("id_questionA_5").style.display= "none";
+        document.getElementById("sectionb1_btn").style.display= "none";
+        // paragraphs[3].style.display = "none";
+    }
 }
 
 function SectionB2() {
