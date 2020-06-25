@@ -13,11 +13,13 @@ document.getElementById("clear_btn").style.display= "none";
 document.getElementById("submit").style.display= "none";
 document.getElementById("canvas_p").style.display= "none";
 document.getElementById("building_img").style.display= "none";
+document.getElementById("gallery_img").style.display= "none";
 document.getElementById("sectionb2_btn").style.display= "none";
 document.getElementById("sectionb3_btn").style.display= "none";
 document.getElementById("sectionb4_btn").style.display= "none";
 document.getElementById("sectionb5_btn").style.display= "none";
 document.getElementById("canvas_p2").style.display= "none";
+
 
 //Section B1 This is hiding all the paragraphs which are 2 or greater. 
 //Then bringing back all those which are 13 and greater.
@@ -106,6 +108,7 @@ function SectionB4() {
     document.getElementById("canvas").style.display= "none";
     document.getElementById("sectionb4_btn").style.display= "none";
     document.getElementById("sectionb5_btn").style.display= "block";
+    document.getElementById("gallery_img").style.display= "block";
 }
 
 function SectionB5() {

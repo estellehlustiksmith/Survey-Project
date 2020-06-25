@@ -25,7 +25,8 @@
     <div id=change_background>
         <button id="change_background_btn", onclick="changeBackground()">Change image</button>
     </div>
-    <img id="building_img" scr="{% static 'questionnaire/building.jpg' %}" alt="building">
+    <img id="building_img" src="{% static 'questionnaire/building.jpg' %}" alt="building">
+    <img id="gallery_img" src="{% static 'questionnaire/gallery.jpg' %}" alt=gallery>
     <div>
         <form method="POST" class="ResponseForm">{% csrf_token %}
             {{ form.as_p }}
