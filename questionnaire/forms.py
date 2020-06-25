@@ -109,9 +109,11 @@ class Consent(forms.ModelForm):
 
 class Interview(forms.ModelForm):
     over18 = forms.BooleanField(required = True, label='I am over 18 years old.')
+    name = forms.CharField(label='Name:',
+        widget=forms.TextInput(attrs={'size':60}))
     email = forms.CharField(label='Email:',
         widget=forms.TextInput(attrs={'size':60}))
     class Meta:
         model = Interview
-        fields=('over18','email')
+        fields=('over18','name','email')
         

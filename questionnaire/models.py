@@ -35,4 +35,5 @@ class Consent(models.Model):
 
 class Interview(models.Model):
     over18 = models.BooleanField()
+    name =  models.CharField(max_length=1028)
     email = models.CharField(max_length=1028)
