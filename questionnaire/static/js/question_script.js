@@ -31,32 +31,27 @@ function SectionB1() {
     || (document.getElementById("id_questionA_1_1").checked)
     || (document.getElementById("id_questionA_1_2").checked)  
     || (document.getElementById("id_questionA_1_3").checked)  
-    || (document.getElementById("id_questionA_1_4").checked)  
-    || (document.getElementById("id_questionA_1_5").checked))
+    || (document.getElementById("id_questionA_1_4").checked))  
     && ((document.getElementById("id_questionA_2_0").checked)
     || (document.getElementById("id_questionA_2_1").checked)
     || (document.getElementById("id_questionA_2_2").checked)
     || (document.getElementById("id_questionA_2_3").checked)
-    || (document.getElementById("id_questionA_2_4").checked)
-    || (document.getElementById("id_questionA_2_5").checked)))
+    || (document.getElementById("id_questionA_2_4").checked))
     && ((document.getElementById("id_questionA_3_0").checked)
     || (document.getElementById("id_questionA_3_1").checked)
     || (document.getElementById("id_questionA_3_2").checked)
     || (document.getElementById("id_questionA_3_3").checked)
-    || (document.getElementById("id_questionA_3_4").checked)
-    || (document.getElementById("id_questionA_3_5").checked)))
+    || (document.getElementById("id_questionA_3_4").checked))
     && ((document.getElementById("id_questionA_4_0").checked)
     || (document.getElementById("id_questionA_4_1").checked)
     || (document.getElementById("id_questionA_4_2").checked)
     || (document.getElementById("id_questionA_4_3").checked)
-    || (document.getElementById("id_questionA_4_4").checked)
-    || (document.getElementById("id_questionA_4_5").checked)))
+    || (document.getElementById("id_questionA_4_4").checked))
     && ((document.getElementById("id_questionA_5_0").checked)
     || (document.getElementById("id_questionA_5_1").checked)
     || (document.getElementById("id_questionA_5_2").checked)
     || (document.getElementById("id_questionA_5_3").checked)
-    || (document.getElementById("id_questionA_5_4").checked)
-    || (document.getElementById("id_questionA_5_5").checked)))
+    || (document.getElementById("id_questionA_5_4").checked))))))
     {
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
@@ -82,10 +77,15 @@ function SectionB1() {
         document.getElementById("sectionb1_btn").style.display= "none";
         // paragraphs[3].style.display = "none";
     }
+    else (alert("Please answer all questions"))
 }
 
 function SectionB2() {
-    if (document.getElementById("id_questionB1_2").value.length != 0 ) {
+    if ((document.getElementById("id_questionB1_2").value.length != 0 )
+    && ((document.getElementById("id_questionB1_1_0").checked)
+    || (document.getElementById("id_questionB1_1_1").checked)
+    || (document.getElementById("id_questionB1_1_2").checked)))
+    {
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
         var i;
@@ -107,6 +107,7 @@ function SectionB2() {
         document.getElementById("sectionb2_btn").style.display= "none";
         document.getElementById("sectionb3_btn").style.display= "block";
     }
+    else (alert("Please answer all questions"))
 }
 
 function SectionB3() {
@@ -128,6 +129,7 @@ function SectionB3() {
         document.getElementById("sectionb3_btn").style.display= "none";
         document.getElementById("sectionb4_btn").style.display= "block";
     }
+    else (alert("Please answer all questions"))
 }
 
 function SectionB4() {
@@ -153,6 +155,7 @@ function SectionB4() {
         document.getElementById("sectionb5_btn").style.display= "block";
         document.getElementById("gallery_img").style.display= "block";
     }
+    else (alert("Please answer all questions"))
 }
 
 function SectionB5() {
@@ -172,4 +175,5 @@ function SectionB5() {
         document.getElementById("clear_btn").style.display= "none";
         document.getElementById("gallery_img").style.display= "none";
     }
+    else (alert("Please answer all questions"))
 }
