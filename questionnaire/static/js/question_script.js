@@ -1,5 +1,7 @@
 var paragraphs = document.getElementsByTagName("p");
 console.log(paragraphs);
+//var textarea = document.getElementsByTagName("textarea");
+//console.log(textarea);
 
 //Section A. This is hiding all paragraphs which are 13 or greater
 var i;
@@ -51,78 +53,91 @@ function SectionB1() {
 }
 
 function SectionB2() {
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-    var i;
-    for (i=2; i <  paragraphs.length; i++) {
-        paragraphs[i].style.display = "none";
-    };
-    for (i=18; i < paragraphs.length; i++) {
-        paragraphs[i].style.display = "block";
-    };
-    for (i=19; i < paragraphs.length; i++) {
-        paragraphs[i].style.display = "none";
-    };
-    document.getElementById("canvas_p").style.display= "block";
-    document.getElementById("canvas").style.display= "block";
-    document.getElementById("id_questionB1_1").style.display= "none";
-    document.getElementById("building_img").style.display= "none";
-    document.getElementById("change_background_btn").style.display= "block";
-    document.getElementById("clear_btn").style.display= "block";
-    document.getElementById("sectionb2_btn").style.display= "none";
-    document.getElementById("sectionb3_btn").style.display= "block";
+    if (document.getElementById("id_questionB1_2").value.length != 0 ) {
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        var i;
+        for (i=2; i <  paragraphs.length; i++) {
+            paragraphs[i].style.display = "none";
+        };
+        for (i=18; i < paragraphs.length; i++) {
+            paragraphs[i].style.display = "block";
+        };
+        for (i=19; i < paragraphs.length; i++) {
+            paragraphs[i].style.display = "none";
+        };
+        document.getElementById("canvas_p").style.display= "block";
+        document.getElementById("canvas").style.display= "block";
+        document.getElementById("id_questionB1_1").style.display= "none";
+        document.getElementById("building_img").style.display= "none";
+        document.getElementById("change_background_btn").style.display= "block";
+        document.getElementById("clear_btn").style.display= "block";
+        document.getElementById("sectionb2_btn").style.display= "none";
+        document.getElementById("sectionb3_btn").style.display= "block";
+    }
 }
 
 function SectionB3() {
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-    var i;
-    for (i=2; i <  paragraphs.length; i++) {
-        paragraphs[i].style.display = "none";
-    };
-    for (i=19; i < paragraphs.length; i++) {
-        paragraphs[i].style.display = "block";
-    };
-    for (i=23; i < paragraphs.length; i++) {
-        paragraphs[i].style.display = "none";
-    };
-    document.getElementById("canvas_p2").style.display= "block";
-    document.getElementById("canvas_p").style.display= "none";
-    document.getElementById("sectionb3_btn").style.display= "none";
-    document.getElementById("sectionb4_btn").style.display= "block";
+    if (document.getElementById("id_questionB1_3").value.length != 0 ) {
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        var i;
+        for (i=2; i <  paragraphs.length; i++) {
+            paragraphs[i].style.display = "none";
+        };
+        for (i=19; i < paragraphs.length; i++) {
+            paragraphs[i].style.display = "block";
+        };
+        for (i=23; i < paragraphs.length; i++) {
+            paragraphs[i].style.display = "none";
+        };
+        document.getElementById("canvas_p2").style.display= "block";
+        document.getElementById("canvas_p").style.display= "none";
+        document.getElementById("sectionb3_btn").style.display= "none";
+        document.getElementById("sectionb4_btn").style.display= "block";
+    }
 }
 
 function SectionB4() {
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-    var i;
-    for (i=2; i <  paragraphs.length; i++) {
-        paragraphs[i].style.display = "none";
-    };
-    for (i=23; i < paragraphs.length; i++) {
-        paragraphs[i].style.display = "block";
-    };
-    for (i=24; i < paragraphs.length; i++) {
-        paragraphs[i].style.display = "none";
-    };
-    document.getElementById("canvas").style.display= "none";
-    document.getElementById("sectionb4_btn").style.display= "none";
-    document.getElementById("sectionb5_btn").style.display= "block";
-    document.getElementById("gallery_img").style.display= "block";
+    if ((document.getElementById("id_questionB1_4").value.length != 0 ) 
+    && (document.getElementById("id_questionB1_5").value.length != 0)
+    && (document.getElementById("id_questionB1_6").value.length != 0)
+    && (document.getElementById("id_questionB1_7").value.length != 0))
+    {
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        var i;
+        for (i=2; i <  paragraphs.length; i++) {
+            paragraphs[i].style.display = "none";
+        };
+        for (i=23; i < paragraphs.length; i++) {
+            paragraphs[i].style.display = "block";
+        };
+        for (i=24; i < paragraphs.length; i++) {
+            paragraphs[i].style.display = "none";
+        };
+        document.getElementById("canvas").style.display= "none";
+        document.getElementById("sectionb4_btn").style.display= "none";
+        document.getElementById("sectionb5_btn").style.display= "block";
+        document.getElementById("gallery_img").style.display= "block";
+    }
 }
 
 function SectionB5() {
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-    var i;
-    for (i=2; i <  paragraphs.length; i++) {
-        paragraphs[i].style.display = "none";
-    };
-    for (i=24; i < paragraphs.length; i++) {
-        paragraphs[i].style.display = "block";
-    };
-    document.getElementById("sectionb5_btn").style.display= "none";
-    document.getElementById("submit").style.display= "block";
-    document.getElementById("change_background_btn").style.display= "none";
-    document.getElementById("clear_btn").style.display= "none";
+    if (document.getElementById("id_questionB1_8").value.length != 0 ) {
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        var i;
+        for (i=2; i <  paragraphs.length; i++) {
+            paragraphs[i].style.display = "none";
+        };
+        for (i=24; i < paragraphs.length; i++) {
+            paragraphs[i].style.display = "block";
+        };
+        document.getElementById("sectionb5_btn").style.display= "none";
+        document.getElementById("submit").style.display= "block";
+        document.getElementById("change_background_btn").style.display= "none";
+        document.getElementById("clear_btn").style.display= "none";
+        document.getElementById("gallery_img").style.display= "none";
+    }
 }
