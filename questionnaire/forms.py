@@ -2,6 +2,7 @@ from django import forms
 from .models import Response
 from .models import Consent
 from .models import Interview
+from .models import Interview_q
 #from .models import Building
 
 #Branch
@@ -116,4 +117,10 @@ class Interview(forms.ModelForm):
     class Meta:
         model = Interview
         fields=('over18','name','email')
-        
+
+class Interview_q(forms.ModelForm):
+    question1 = forms.CharField(widget=forms.TextInput(attrs={'size':60}))   
+    question2 = forms.CharField(widget=forms.TextInput(attrs={'size':60}))  
+    class Meta:
+        model = Interview_q
+        fields=('question1','question2')  

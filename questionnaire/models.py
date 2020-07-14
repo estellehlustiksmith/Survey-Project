@@ -37,3 +37,7 @@ class Interview(models.Model):
     over18 = models.BooleanField()
     name =  models.CharField(max_length=1028)
     email = models.CharField(max_length=1028)
+
+class Interview_q(models.Model):
+    question1 = models.CharField(max_length=1028)
+    question2 = models.CharField(max_length=1028)

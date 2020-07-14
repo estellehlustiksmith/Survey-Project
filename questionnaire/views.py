@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import Response
 from .forms import Consent
 from .forms import Interview
+from .forms import Interview_q
 #from .forms import Building
 
 def landing_page(request):
@@ -55,3 +56,14 @@ def interview(request):
 
    # return render(request,'questionnaire/interview.html', {})
 # Create your views here.
+
+def interview_q(request):
+    if request.method == 'POST':
+        form = Interview_q(request.POST)
+        if form.is_valid():
+            interview_q = form.save(commit=False)
+            interview_q.save()
+            return redirect('thankyou')
+    else:
+        form = Interview_q()
+    return render(request,'questionnaire/interview_q.html', {'form': form})
