@@ -21,6 +21,7 @@ document.getElementById("sectionb3_btn").style.display= "none";
 document.getElementById("sectionb4_btn").style.display= "none";
 document.getElementById("sectionb5_btn").style.display= "none";
 document.getElementById("canvas_p2").style.display= "none";
+document.getElementById("error").style.display= "none";
 
 
 //Section B1 This is hiding all the paragraphs which are 2 or greater. 
@@ -55,6 +56,7 @@ function SectionB1() {
     {
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
+        document.getElementById("error").style.display= "none";
         var i;
         for (i=2; i <  paragraphs.length; i++) {
             paragraphs[i].style.display = "none";
@@ -77,7 +79,10 @@ function SectionB1() {
         document.getElementById("sectionb1_btn").style.display= "none";
         // paragraphs[3].style.display = "none";
     }
-    else (alert("Please answer all questions"))
+    else{ //(alert("Please answer all questions"));
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    document.getElementById("error").style.display= "block";}
 }
 
 function SectionB2() {
