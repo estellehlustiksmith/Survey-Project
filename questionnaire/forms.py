@@ -91,8 +91,11 @@ class Response(forms.ModelForm):
 
     class Meta:
         model = Response
-        fields = ('questionA_1','questionA_2','questionA_3','questionA_4','questionA_5','questionB1_1','questionB1_2','questionB1_3','questionB1_4','questionB1_5','questionB1_6','questionB1_7','questionB1_8','questionB1_9','questionB1_10','questionB1_11','questionB1_12','drawing')
-        widgets = {'drawing': forms.HiddenInput()}#
+        fields = ('questionA_1','questionA_2','questionA_3','questionA_4','questionA_5','questionB1_1','questionB1_2','questionB1_3','questionB1_4','questionB1_5','questionB1_6','questionB1_7','questionB1_8','questionB1_9','questionB1_10','questionB1_11','questionB1_12','drawing_0', 'drawing_1')
+        widgets = {
+            'drawing_0': forms.HiddenInput(),
+            'drawing_1': forms.HiddenInput()
+        }
 
 class Consent(forms.ModelForm):
     consent0 = forms.BooleanField(required = True, label='I am over 18 years old.')
