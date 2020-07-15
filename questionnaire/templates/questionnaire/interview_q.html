@@ -1,0 +1,14 @@
+{% extends 'questionnaire/base.html' %}
+{% load static %}
+{% block body %}
+    <div id='project_title'>
+        <h1>The removal of street art from the street: <br>the transformation of the playful politics of place</h1>
+    </div> 
+    <div>
+        <form method="POST" class="Interview_q">{% csrf_token %}
+            {{ form.as_p }}
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}
