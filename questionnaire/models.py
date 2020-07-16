@@ -20,7 +20,8 @@ class Response(models.Model):
     questionB1_11 = models.CharField(max_length=1028)
     questionB1_12 = models.CharField(max_length=1028)
 
-    drawing = models.CharField(max_length=1000000000)
+    drawing_0 = models.CharField(max_length=1000000000)
+    drawing_1 = models.CharField(max_length=1000000000)
 
 class Consent(models.Model):
     consent0 = models.BooleanField()

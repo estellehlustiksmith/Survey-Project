@@ -38,8 +38,8 @@
             <button id="submit_btn", type="submit">Submit</button>
         </div>
         <button id="sectionb1_btn", type="button" onclick="SectionB1()">Continue</button>
-        <button id="sectionb2_btn", type="button" onclick="SectionB2()">Continue</button>
-        <button id="sectionb3_btn", type="button" onclick="SectionB3()">Continue</button>
+        <button id="sectionb2_btn", type="button" value="0", onclick="SectionB2(); changeSection(this.value);">Continue</button>
+        <button id="sectionb3_btn", type="button" value="1", onclick="SectionB3(); changeSection(this.value);">Continue</button>
         <button id="sectionb4_btn", type="button" onclick="SectionB4()">Continue</button>
         <button id="sectionb5_btn", type="button" onclick="SectionB5()">Continue</button>
 
@@ -51,7 +51,20 @@
             '{% static "questionnaire/canvas_background1.jpg" %}',
             '{% static "questionnaire/canvas_background2.jpg" %}',
             '{% static "questionnaire/canvas_background3.jpg" %}'
-        ]
+        ];
+        var section_images = {
+            "0": [
+                images[0],
+                images[1]
+            ],
+            "1": [
+                images[2],
+                images[0],
+                images[3]
+            ]
+        };
+
+        var current_section;
 
         function preloadImages(array) {
             var count = 0;
@@ -63,9 +76,9 @@
                 var img = new Image();
                 img.onload = function() {
                     count += 1;
-                    if (count == array.length) {
-                        setBackground('{% static "questionnaire/canvas_background.jpg" %}')
-                    }
+                    //if (count == array.length) {
+                    //    setBackground('{% static "questionnaire/canvas_background.jpg" %}')
+                    //}
                 }
                 list.push(img);
                 img.src = array[i];
@@ -74,7 +87,10 @@
 
         preloadImages(images);
 
-        var drawing_field = document.getElementById("id_drawing");
+        var drawing_fields = [
+            document.getElementById("id_drawing_0"),
+            document.getElementById("id_drawing_1")
+        ];
         // get canvas
         var canvas = document.getElementById("canvas")
 
@@ -92,17 +108,23 @@
         document.addEventListener('mouseenter', setPosition);
         document.addEventListener('mouseleave', save);
 
+        function changeSection(section_num) {
+            current_section = section_num;
+            setBackground(section_images[current_section][0])
+            background_num = 0
+        }
+
         function changeBackground() {
             background_num += 1;
-            if (background_num == images.length) {
+            if (background_num == section_images[current_section].length) {
                 background_num = 0;
             }
 
-            setBackground(images[background_num]);
+            setBackground(section_images[current_section][background_num]);
         }
 
         function clearCanvas() {
-            setBackground(images[background_num]);
+            setBackground(section_images[current_section][background_num]);
         }
 
         function setBackground(url) {
@@ -149,7 +171,7 @@
             var img_data = canvas.toDataURL("image/png")
             //console.log(img_data);
 
-            drawing_field.value = img_data;
+            drawing_fields[current_section].value = img_data;
         }
 
     </script>
