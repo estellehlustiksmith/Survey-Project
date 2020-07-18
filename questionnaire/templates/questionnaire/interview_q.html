@@ -4,6 +4,10 @@
     <div id='project_title'>
         <h1>The removal of street art from the street: <br>the transformation of the playful politics of place</h1>
     </div> 
+    <p id="canvas_p">Draw a frame around what you think encompasses the artwork or where the boundary of the artwork might be. 
+        <br>You can use the ‘Change background’ button to decide what image of the artwork to use. 
+        <br>Draw by clicking and dragging your mouse. If you wish to reset the image, click the ‘Clear’ button.
+    </p>
     <div id="drawing">
         <div id="canvas-holder">
             <canvas id="canvas"></canvas>
@@ -22,35 +26,32 @@
             <div id='submit'>
                 <button id="submit_btn", type="submit">Submit</button>
             </div>
-            <button id="int1_btn", type="button" value="0", onclick="Int1(); changeSection(this.value);">Continue</button>    
-        </form> 
-    </div>
-    <script type="text/javascript" src="{% static 'js/question_script.js' %}"></script>
-    <div>
+            <button id="int1_btn", type="button" value="1", onclick="changeSection(this.value);">Continue</button>    
+        </form>
+    </div> 
+    <!--<script type="text/javascript" src="{% static 'js/question_script.js' %}"></script>-->
     <script>
         var images = [
-            '{% static "questionnaire/canvas_background.jpg" %}', //0
-            '{% static "questionnaire/canvas_background1.jpg" %}', //1
-            '{% static "questionnaire/canvas_background2.jpg" %}', //2
+            '{% static "questionnaire/canvas_background.png" %}', //0
+            '{% static "questionnaire/canvas_background1.png" %}', //1
+            '{% static "questionnaire/canvas_background2.png" %}', //2
             '{% static "questionnaire/canvas_background3.jpg" %}', //3
-            '{% static "questionnaire/canvas_background4.png" %}', //4
+            '{% static "questionnaire/canvas_background4.jpg" %}', //4
         ];
         var section_images = {
             "0": [
                 images[0],
                 images[1],
                 images[2],
-                images[3],
-                images[4],
             ],
             "1": [
-                images[0],
-                images[1],
+                images[3],
+                images[4],
                 images[2],
-            ]
-        };
+            ],
+        };  
 
-        var current_section = 0;
+        var current_section;
 
         function preloadImages(array) {
             var count = 0;
@@ -62,9 +63,9 @@
                 var img = new Image();
                 img.onload = function() {
                     count += 1;
-                    if (count == array.length) {
-                        setBackground('{% static "questionnaire/canvas_background.jpg" %}')
-                    }
+                    //if (count == array.length) {
+                    //    setBackground('{% static "questionnaire/canvas_background.jpg" %}')
+                    //}
                 }
                 list.push(img);
                 img.src = array[i];
@@ -75,7 +76,7 @@
 
         var drawing_fields = [
             document.getElementById("id_int_drawing_0"),
-            document.getElementById("id_int_drawing_1")
+            document.getElementById("id_int_drawing_1"),
         ];
         // get canvas
         var canvas = document.getElementById("canvas")
@@ -93,6 +94,8 @@
         document.addEventListener('mouseup', save);
         document.addEventListener('mouseenter', setPosition);
         document.addEventListener('mouseleave', save);
+
+        changeSection(0);
 
         function changeSection(section_num) {
             current_section = section_num;
@@ -161,5 +164,4 @@
         }
 
     </script>
-    </div>
-{% endblock %}
+    {% endblock %}

@@ -229,7 +229,3 @@ function SectionB5() {
         document.body.scrollTop = 0;
         document.getElementById("error").style.display= "block";}
 }
-
-function Int1() {
-
-}
