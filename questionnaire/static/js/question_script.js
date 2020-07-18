@@ -13,6 +13,7 @@ document.getElementById("canvas").style.display= "none";
 document.getElementById("change_background_btn").style.display= "none";
 document.getElementById("clear_btn").style.display= "none";
 document.getElementById("submit").style.display= "none";
+document.getElementById("drawing").style.display= "none";
 document.getElementById("canvas_p").style.display= "none";
 document.getElementById("building_img").style.display= "none";
 document.getElementById("gallery_img").style.display= "none";
@@ -22,6 +23,7 @@ document.getElementById("sectionb4_btn").style.display= "none";
 document.getElementById("sectionb5_btn").style.display= "none";
 document.getElementById("canvas_p2").style.display= "none";
 document.getElementById("error").style.display= "none";
+document.getElementById("sectionb4_5_btn").style.display= "none";
 
 
 //Section B1 This is hiding all the paragraphs which are 2 or greater. 
@@ -110,6 +112,7 @@ function SectionB2() {
         document.getElementById("building_img").style.display= "none";
         document.getElementById("change_background_btn").style.display= "block";
         document.getElementById("clear_btn").style.display= "block";
+        document.getElementById("drawing").style.display= "block";
         document.getElementById("sectionb2_btn").style.display= "none";
         document.getElementById("sectionb3_btn").style.display= "block";
     }
@@ -136,6 +139,7 @@ function SectionB3() {
         };
         document.getElementById("canvas_p2").style.display= "block";
         document.getElementById("canvas_p").style.display= "none";
+        document.getElementById("drawing").style.display= "block";
         document.getElementById("sectionb3_btn").style.display= "none";
         document.getElementById("sectionb4_btn").style.display= "block";
     }
@@ -165,14 +169,32 @@ function SectionB4() {
             paragraphs[i].style.display = "none";
         };
         document.getElementById("canvas").style.display= "none";
+        document.getElementById("change_background_btn").style.display= "none";
+        document.getElementById("clear_btn").style.display= "none";
         document.getElementById("sectionb4_btn").style.display= "none";
-        document.getElementById("sectionb5_btn").style.display= "block";
+        document.getElementById("sectionb4_5_btn").style.display= "block";
         document.getElementById("gallery_img").style.display= "block";
     }
     else{
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
         document.getElementById("error").style.display= "block";}
+}
+
+function SectionB4_5(){
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    document.getElementById("error").style.display= "none";
+    var i;
+    for (i=2; i <  paragraphs.length; i++) {
+        paragraphs[i].style.display = "none";
+    };
+    document.getElementById("sectionb4_5_btn").style.display= "none";
+    document.getElementById("sectionb5_btn").style.display= "block";
+    document.getElementById("canvas").style.display= "block";
+    document.getElementById("change_background_btn").style.display= "block";
+    document.getElementById("clear_btn").style.display= "block";
+    document.getElementById("gallery_img").style.display= "none";
 }
 
 function SectionB5() {
@@ -189,12 +211,14 @@ function SectionB5() {
         };
         document.getElementById("sectionb5_btn").style.display= "none";
         document.getElementById("submit").style.display= "block";
-        document.getElementById("change_background_btn").style.display= "none";
-        document.getElementById("clear_btn").style.display= "none";
         document.getElementById("gallery_img").style.display= "none";
     }
     else{
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
         document.getElementById("error").style.display= "block";}
+}
+
+function Int1() {
+
 }

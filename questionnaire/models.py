@@ -22,6 +22,7 @@ class Response(models.Model):
 
     drawing_0 = models.CharField(max_length=1000000000)
     drawing_1 = models.CharField(max_length=1000000000)
+    drawing_2 = models.CharField(max_length=1000000000)
 
 class Consent(models.Model):
     consent0 = models.BooleanField()
@@ -40,5 +41,5 @@ class Interview(models.Model):
     email = models.CharField(max_length=1028)
 
 class Interview_q(models.Model):
-    question1 = models.CharField(max_length=1028)
-    question2 = models.CharField(max_length=1028)
+    int_drawing_0 = models.CharField(max_length=1000000000)
+    int_drawing_1 = models.CharField(max_length=1000000000)

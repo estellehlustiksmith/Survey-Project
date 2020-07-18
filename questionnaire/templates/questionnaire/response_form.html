@@ -19,14 +19,16 @@
 	    <br><br>If you would now like to change where you would draw the frame encompassing the artwork please redraw it on the image below. 
         <br>You can use the ‘Change background’ button to decide what image of the artwork to use. Draw by clicking and dragging your mouse. If you wish to reset the image, click the ‘Clear’ button. 
     </p>
-    <div id="canvas-holder">
-        <canvas id="canvas"></canvas>
-    </div>
-    <div id='clear'>
-        <button id="clear_btn", onclick="clearCanvas()">Clear</button>
-    </div>
-    <div id=change_background>
-        <button id="change_background_btn", onclick="changeBackground()">Change image</button>
+    <div id="drawing">
+        <div id="canvas-holder">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div id='clear'>
+            <button id="clear_btn", onclick="clearCanvas()">Clear</button>
+        </div>
+        <div id=change_background>
+            <button id="change_background_btn", onclick="changeBackground()">Change image</button>
+        </div>
     </div>
     <img id="building_img" src="{% static 'questionnaire/building.jpg' %}" alt="building">
     <img id="gallery_img" src="{% static 'questionnaire/gallery.jpg' %}" alt=gallery>
@@ -41,28 +43,35 @@
         <button id="sectionb2_btn", type="button" value="0", onclick="SectionB2(); changeSection(this.value);">Continue</button>
         <button id="sectionb3_btn", type="button" value="1", onclick="SectionB3(); changeSection(this.value);">Continue</button>
         <button id="sectionb4_btn", type="button" onclick="SectionB4()">Continue</button>
+        <button id="sectionb4_5_btn", type="button" value="2", onclick="SectionB4_5(); changeSection(this.value);">Continue</button>
         <button id="sectionb5_btn", type="button" onclick="SectionB5()">Continue</button>
 
     </form>
     <script type="text/javascript" src="{% static 'js/question_script.js' %}"></script>
     <script>
         var images = [
-            '{% static "questionnaire/canvas_background.jpg" %}',
-            '{% static "questionnaire/canvas_background1.jpg" %}',
-            '{% static "questionnaire/canvas_background2.jpg" %}',
-            '{% static "questionnaire/canvas_background3.jpg" %}'
+            '{% static "questionnaire/canvas_background.png" %}', //0
+            '{% static "questionnaire/canvas_background1.png" %}', //1
+            '{% static "questionnaire/canvas_background2.png" %}', //2
+            '{% static "questionnaire/canvas_background3.png" %}', //3
+            '{% static "questionnaire/canvas_background4.png" %}', //4
         ];
         var section_images = {
             "0": [
                 images[0],
-                images[1]
+                images[1],
+                images[2],
             ],
             "1": [
-                images[2],
                 images[0],
-                images[3]
-            ]
-        };
+                images[1],
+                images[2],
+            ],
+            "2": [
+                images[3],
+                images[4],
+        ]
+        };  
 
         var current_section;
 

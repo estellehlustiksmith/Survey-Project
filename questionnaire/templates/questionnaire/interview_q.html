@@ -4,11 +4,162 @@
     <div id='project_title'>
         <h1>The removal of street art from the street: <br>the transformation of the playful politics of place</h1>
     </div> 
+    <div id="drawing">
+        <div id="canvas-holder">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div id='clear'>
+            <button id="clear_btn", onclick="clearCanvas()">Clear</button>
+        </div>
+        <div id=change_background>
+            <button id="change_background_btn", onclick="changeBackground()">Change image</button>
+        </div>
+    </div>
     <div>
         <form method="POST" class="Interview_q">{% csrf_token %}
             {{ form.as_p }}
             </div>
-            <button type="submit">Submit</button>
-        </form>
+            <div id='submit'>
+                <button id="submit_btn", type="submit">Submit</button>
+            </div>
+            <button id="int1_btn", type="button" value="0", onclick="Int1(); changeSection(this.value);">Continue</button>    
+        </form> 
+    </div>
+    <script type="text/javascript" src="{% static 'js/question_script.js' %}"></script>
+    <div>
+    <script>
+        var images = [
+            '{% static "questionnaire/canvas_background.jpg" %}', //0
+            '{% static "questionnaire/canvas_background1.jpg" %}', //1
+            '{% static "questionnaire/canvas_background2.jpg" %}', //2
+            '{% static "questionnaire/canvas_background3.jpg" %}', //3
+            '{% static "questionnaire/canvas_background4.png" %}', //4
+        ];
+        var section_images = {
+            "0": [
+                images[0],
+                images[1],
+                images[2],
+                images[3],
+                images[4],
+            ],
+            "1": [
+                images[0],
+                images[1],
+                images[2],
+            ]
+        };
+
+        var current_section = 0;
+
+        function preloadImages(array) {
+            var count = 0;
+            if (!preloadImages.list) {
+                preloadImages.list = [];
+            }
+            var list = preloadImages.list;
+            for (var i = 0; i < array.length; i++) {
+                var img = new Image();
+                img.onload = function() {
+                    count += 1;
+                    if (count == array.length) {
+                        setBackground('{% static "questionnaire/canvas_background.jpg" %}')
+                    }
+                }
+                list.push(img);
+                img.src = array[i];
+            }    
+        }
+
+        preloadImages(images);
+
+        var drawing_fields = [
+            document.getElementById("id_int_drawing_0"),
+            document.getElementById("id_int_drawing_1")
+        ];
+        // get canvas
+        var canvas = document.getElementById("canvas")
+
+        // get canvas 2D context and set him correct size
+        var ctx = canvas.getContext('2d');
+
+        var background_num = 0;
+
+        // last known position
+        var pos = { x: 0, y: 0 };
+
+        document.addEventListener('mousemove', draw);
+        document.addEventListener('mousedown', setPosition);
+        document.addEventListener('mouseup', save);
+        document.addEventListener('mouseenter', setPosition);
+        document.addEventListener('mouseleave', save);
+
+        function changeSection(section_num) {
+            current_section = section_num;
+            setBackground(section_images[current_section][0])
+            background_num = 0
+        }
+
+        function changeBackground() {
+            background_num += 1;
+            if (background_num == section_images[current_section].length) {
+                background_num = 0;
+            }
+
+            setBackground(section_images[current_section][background_num]);
+        }
+
+        function clearCanvas() {
+            setBackground(section_images[current_section][background_num]);
+        }
+
+        function setBackground(url) {
+            var background = new Image();
+
+            background.onload = function(){
+                ctx.drawImage(background,0,0);   
+            };
+            background.src = url;
+
+            canvas.width = background.width;
+            canvas.height = background.height;
+
+            ctx.canvas.width = canvas.width;
+            ctx.canvas.height = canvas.height;
+        }
+
+        // new position from mouse event
+        function setPosition(e) {
+            var rect = canvas.getBoundingClientRect();
+            pos.x = e.clientX - rect.left;
+            pos.y = e.clientY - rect.top;
+        }
+
+        function draw(e) {
+            // mouse left button must be pressed
+            if (e.buttons !== 1) return;
+
+            ctx.beginPath(); // begin
+
+            ctx.lineWidth = 5;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = '#000000';
+
+            ctx.moveTo(pos.x, pos.y); // from
+            setPosition(e);
+            ctx.lineTo(pos.x, pos.y); // to
+
+            ctx.stroke(); // draw it!
+        }
+
+        function save(e) {
+            //var img_data = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            var img_data = canvas.toDataURL("image/png")
+            //console.log(img_data);
+
+            drawing_fields[current_section].value = img_data;
+        }
+
+    </script>
     </div>
 {% endblock %}

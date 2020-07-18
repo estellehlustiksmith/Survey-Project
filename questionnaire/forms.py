@@ -69,6 +69,8 @@ class Response(forms.ModelForm):
     questionB1_8 = forms.CharField(
         label='How do you know feel about the artwork in its gallery setting? Or if you prefer, write the first three words which spring to mind.',
         widget=forms.Textarea(attrs={'rows':10,'cols':60}))
+
+#SectionB4.5
     #auction canvas p
     #auction canvas
 
@@ -91,10 +93,11 @@ class Response(forms.ModelForm):
 
     class Meta:
         model = Response
-        fields = ('questionA_1','questionA_2','questionA_3','questionA_4','questionA_5','questionB1_1','questionB1_2','questionB1_3','questionB1_4','questionB1_5','questionB1_6','questionB1_7','questionB1_8','questionB1_9','questionB1_10','questionB1_11','questionB1_12','drawing_0', 'drawing_1')
+        fields = ('questionA_1','questionA_2','questionA_3','questionA_4','questionA_5','questionB1_1','questionB1_2','questionB1_3','questionB1_4','questionB1_5','questionB1_6','questionB1_7','questionB1_8','questionB1_9','questionB1_10','questionB1_11','questionB1_12','drawing_0', 'drawing_1', 'drawing_2')
         widgets = {
             'drawing_0': forms.HiddenInput(),
-            'drawing_1': forms.HiddenInput()
+            'drawing_1': forms.HiddenInput(),
+            'drawing_2': forms.HiddenInput(),
         }
 
 class Consent(forms.ModelForm):
@@ -122,8 +125,10 @@ class Interview(forms.ModelForm):
         fields=('over18','name','email')
 
 class Interview_q(forms.ModelForm):
-    question1 = forms.CharField(widget=forms.TextInput(attrs={'size':60}))   
-    question2 = forms.CharField(widget=forms.TextInput(attrs={'size':60}))  
     class Meta:
         model = Interview_q
-        fields=('question1','question2')  
+        fields=('int_drawing_0','int_drawing_1') 
+        widgets = {
+            'int_drawing_0': forms.HiddenInput(),
+            'int_drawing_1': forms.HiddenInput()
+        } 

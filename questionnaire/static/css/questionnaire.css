@@ -159,10 +159,23 @@ textarea{
 #background_button {
     background-color: rgba(128, 128, 128, 0.76);
     border: transparent;
+    float: inline-start;
 }
 
 #change_background {
-    padding-right: 120px;
+    /*padding-right: 120px;*/
+    float: inline-start;
+    padding-top: 13px;
+    padding-left: 20px;
+}
+
+#clear {
+    padding-top: 13px;
+    float: inline-start;
+}
+
+#drawing {
+    padding-bottom: 47px;
 }
 
 /*#canvas {
@@ -179,13 +192,11 @@ textarea{
 }
 
 #building_img{
-    height: 450px;
     border: thin solid #000000;
     margin: auto;
 }
 
 #gallery_img{
-    height: 450px;
     border: thin solid #000000;
     margin: auto;
 }
