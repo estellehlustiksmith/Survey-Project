@@ -132,7 +132,7 @@ function SectionB3() {
         for (i=2; i <  paragraphs.length; i++) {
             paragraphs[i].style.display = "none";
         };
-        for (i=19; i < paragraphs.length; i++) {
+        for (i=20; i < paragraphs.length; i++) {
             paragraphs[i].style.display = "block";
         };
         for (i=23; i < paragraphs.length; i++) {

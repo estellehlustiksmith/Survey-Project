@@ -72,3 +72,15 @@ def interview_q(request):
     else:
         form = Interview_q()
     return render(request,'questionnaire/interview_q.html', {'form': form})
+
+
+def gallery(request):
+    if request.method == 'POST':
+        form = Gallery(request.POST)
+        if form.is_valid():
+            gallery = form.save(commit=False)
+            gallery.save()
+            return redirect('thankyou')
+    else:
+        form = Gallery()
+    return render(request,'questionnaire/gallery.html', {'form': form})

@@ -71,7 +71,7 @@ function SectionB1() {
             paragraphs[i].style.display = "none";
         };
         document.getElementById("id_questionB1_1").style.display= "block";
-        document.getElementById("building_img").style.display= "block";
+        document.getElementById("gallery_img").style.display= "block";
         document.getElementById("sectionb2_btn").style.display= "block";
         document.getElementById("canvas").style.display= "none";
         document.getElementById("id_questionA_1").style.display= "none";
@@ -110,7 +110,7 @@ function SectionB2() {
         document.getElementById("canvas_p").style.display= "block";
         document.getElementById("canvas").style.display= "block";
         document.getElementById("id_questionB1_1").style.display= "none";
-        document.getElementById("building_img").style.display= "none";
+        document.getElementById("gallery_img").style.display= "none";
         document.getElementById("change_background_btn").style.display= "block";
         document.getElementById("clear_btn").style.display= "block";
         document.getElementById("drawing").style.display= "block";
@@ -132,7 +132,7 @@ function SectionB3() {
         for (i=2; i <  paragraphs.length; i++) {
             paragraphs[i].style.display = "none";
         };
-        for (i=19; i < paragraphs.length; i++) {
+        for (i=20; i < paragraphs.length; i++) {
             paragraphs[i].style.display = "block";
         };
         for (i=23; i < paragraphs.length; i++) {
@@ -176,7 +176,7 @@ function SectionB4() {
         document.getElementById("clear_btn").style.display= "none";
         document.getElementById("sectionb4_btn").style.display= "none";
         document.getElementById("sectionb4_5_btn").style.display= "block";
-        document.getElementById("gallery_img").style.display= "block";
+        document.getElementById("building_img").style.display= "block";
         document.getElementById("video").style.display= "none";
     }
     else{
@@ -200,7 +200,7 @@ function SectionB4_5(){
     document.getElementById("drawing").style.display= "block";
     document.getElementById("clear_btn").style.display= "block";
     document.getElementById("canvas_p").style.display= "block";
-    document.getElementById("gallery_img").style.display= "none";
+    document.getElementById("building_img").style.display= "none";
 }
 
 function SectionB5() {
