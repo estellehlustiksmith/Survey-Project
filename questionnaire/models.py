@@ -45,7 +45,7 @@ class Interview_q(models.Model):
     int_drawing_1 = models.CharField(max_length=1000000000)
 
 class Gallery(models.Model):
-    questionA_1 = models.CharField(max_length=1028)
+    questionA_1 = models.CharField(max_length=1028, blank=True)
     questionA_2 = models.CharField(max_length=1028)
     questionA_3 = models.CharField(max_length=1028)
     questionA_4 = models.CharField(max_length=1028)

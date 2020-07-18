@@ -204,7 +204,7 @@ class Gallery(forms.ModelForm):
 
     #SectionB5
     questionB1_9 = forms.CharField(
-        label='To what extent do you think the meaning and political associations of the piece might have changed now it’s no longer on the street? ',
+        label='To what extent do you think the meaning and political associations of the piece might have changed now it’s no longer on the street?',
         widget=forms.Textarea(attrs={'rows':10,'cols':60}))
 
     questionB1_10 = forms.CharField(
