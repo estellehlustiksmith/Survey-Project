@@ -43,3 +43,26 @@ class Interview(models.Model):
 class Interview_q(models.Model):
     int_drawing_0 = models.CharField(max_length=1000000000)
     int_drawing_1 = models.CharField(max_length=1000000000)
+
+class Gallery(models.Model):
+    questionA_1 = models.CharField(max_length=1028)
+    questionA_2 = models.CharField(max_length=1028)
+    questionA_3 = models.CharField(max_length=1028)
+    questionA_4 = models.CharField(max_length=1028)
+    questionA_5 = models.CharField(max_length=1028)
+    questionB1_1 = models.CharField(max_length=1028)
+    questionB1_2 = models.CharField(max_length=1028)
+    questionB1_3 = models.CharField(max_length=1028)
+    questionB1_4 = models.CharField(max_length=1028)
+    questionB1_5 = models.CharField(max_length=1028)
+    questionB1_6 = models.CharField(max_length=1028)
+    questionB1_7 = models.CharField(max_length=1028)
+    questionB1_8 = models.CharField(max_length=1028)
+    questionB1_9 = models.CharField(max_length=1028)
+    questionB1_10 = models.CharField(max_length=1028)
+    questionB1_11 = models.CharField(max_length=1028)
+    questionB1_12 = models.CharField(max_length=1028)
+
+    drawing_0 = models.CharField(max_length=1000000000)
+    drawing_1 = models.CharField(max_length=1000000000)
+    drawing_2 = models.CharField(max_length=1000000000)

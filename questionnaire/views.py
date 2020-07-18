@@ -1,9 +1,11 @@
+from random import randint
 from django.shortcuts import render, redirect
 from .forms import Response
 from .forms import Consent
 from .forms import Interview
 from .forms import Interview_q
-#from .forms import Building
+from .forms import Gallery
+
 
 def landing_page(request):
     if request.method == 'POST':
@@ -11,7 +13,10 @@ def landing_page(request):
         if form.is_valid():
             landing_page = form.save(commit=False)
             landing_page.save()
-            return redirect('questionnaire')
+            if randint(0, 1) == 1:
+                return redirect('questionnaire')
+            else:
+                return redirect('gallery')
     else:
         form = Consent()
     return render(request,'questionnaire/landing_page.html', {'form': form})

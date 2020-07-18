@@ -23,6 +23,6 @@ urlpatterns = [
     path( 'interview',views.interview, name='interview'),
     path( 'questionnaire', views.response_form, name='questionnaire'),
     path( 'interview_q', views.interview_q, name='interview_q'),
-#    path( 'building', views.building, name='building'),
+    path( 'gallery', views.gallery, name='gallery'),
     path( 'thankyou', views.ty_form_complete, name='thankyou')
 ]
