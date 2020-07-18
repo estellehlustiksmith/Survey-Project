@@ -24,7 +24,6 @@ document.getElementById("sectionb5_btn").style.display= "none";
 document.getElementById("canvas_p2").style.display= "none";
 document.getElementById("error").style.display= "none";
 document.getElementById("sectionb4_5_btn").style.display= "none";
-document.getElementById("video").style.display= "none";
 
 
 //Section B1 This is hiding all the paragraphs which are 2 or greater. 
@@ -139,7 +138,6 @@ function SectionB3() {
             paragraphs[i].style.display = "none";
         };
         document.getElementById("canvas_p2").style.display= "block";
-        document.getElementById("video").style.display= "block";
         document.getElementById("canvas_p").style.display= "none";
         document.getElementById("drawing").style.display= "block";
         document.getElementById("sectionb3_btn").style.display= "none";
@@ -176,7 +174,6 @@ function SectionB4() {
         document.getElementById("sectionb4_btn").style.display= "none";
         document.getElementById("sectionb4_5_btn").style.display= "block";
         document.getElementById("gallery_img").style.display= "block";
-        document.getElementById("video").style.display= "block";
     }
     else{
         document.documentElement.scrollTop = 0;
