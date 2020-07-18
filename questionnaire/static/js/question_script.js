@@ -24,6 +24,7 @@ document.getElementById("sectionb5_btn").style.display= "none";
 document.getElementById("canvas_p2").style.display= "none";
 document.getElementById("error").style.display= "none";
 document.getElementById("sectionb4_5_btn").style.display= "none";
+document.getElementById("video").style.display= "none";
 
 
 //Section B1 This is hiding all the paragraphs which are 2 or greater. 
@@ -66,7 +67,7 @@ function SectionB1() {
         for (i=15; i < paragraphs.length; i++) {
             paragraphs[i].style.display = "block";
         };
-        for (i=18;  i < paragraphs.length; i++) {
+        for (i=19;  i < paragraphs.length; i++) {
             paragraphs[i].style.display = "none";
         };
         document.getElementById("id_questionB1_1").style.display= "block";
@@ -100,10 +101,10 @@ function SectionB2() {
         for (i=2; i <  paragraphs.length; i++) {
             paragraphs[i].style.display = "none";
         };
-        for (i=18; i < paragraphs.length; i++) {
+        for (i=19; i < paragraphs.length; i++) {
             paragraphs[i].style.display = "block";
         };
-        for (i=19; i < paragraphs.length; i++) {
+        for (i=20; i < paragraphs.length; i++) {
             paragraphs[i].style.display = "none";
         };
         document.getElementById("canvas_p").style.display= "block";
@@ -138,6 +139,7 @@ function SectionB3() {
             paragraphs[i].style.display = "none";
         };
         document.getElementById("canvas_p2").style.display= "block";
+        document.getElementById("video").style.display= "block";
         document.getElementById("canvas_p").style.display= "none";
         document.getElementById("drawing").style.display= "block";
         document.getElementById("sectionb3_btn").style.display= "none";
@@ -169,11 +171,13 @@ function SectionB4() {
             paragraphs[i].style.display = "none";
         };
         document.getElementById("canvas").style.display= "none";
+        document.getElementById("drawing").style.display= "none";
         document.getElementById("change_background_btn").style.display= "none";
         document.getElementById("clear_btn").style.display= "none";
         document.getElementById("sectionb4_btn").style.display= "none";
         document.getElementById("sectionb4_5_btn").style.display= "block";
         document.getElementById("gallery_img").style.display= "block";
+        document.getElementById("video").style.display= "none";
     }
     else{
         document.documentElement.scrollTop = 0;
@@ -193,6 +197,7 @@ function SectionB4_5(){
     document.getElementById("sectionb5_btn").style.display= "block";
     document.getElementById("canvas").style.display= "block";
     document.getElementById("change_background_btn").style.display= "block";
+    document.getElementById("drawing").style.display= "block";
     document.getElementById("clear_btn").style.display= "block";
     document.getElementById("gallery_img").style.display= "none";
 }
@@ -212,6 +217,10 @@ function SectionB5() {
         document.getElementById("sectionb5_btn").style.display= "none";
         document.getElementById("submit").style.display= "block";
         document.getElementById("gallery_img").style.display= "none";
+        document.getElementById("canvas").style.display= "none";
+        document.getElementById("change_background_btn").style.display= "none";
+        document.getElementById("clear_btn").style.display= "none";
+        document.getElementById("drawing").style.display= "none";
     }
     else{
         document.documentElement.scrollTop = 0;

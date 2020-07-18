@@ -7,7 +7,10 @@
     </div>   
     <div id='error' class="error-message">
         <span class="error-text">Please complete all the questions</span>
-    </div>    
+    </div>  
+    <div id='video'>
+        <iframe src="https://giphy.com/embed/KeidxPJOMvfl53VlD5" width="571" height="299" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> 
+    </div> 
     <p id='test'>To what extend do you agree with each statement. Please rank on a scale of 1 to 5, with 1 being not at all and 5 being fully.</p>
     </script>
     <p id="canvas_p">Draw a frame around what you think encompasses the artwork or where the boundary of the artwork might be. 
@@ -98,7 +101,8 @@
 
         var drawing_fields = [
             document.getElementById("id_drawing_0"),
-            document.getElementById("id_drawing_1")
+            document.getElementById("id_drawing_1"),
+            document.getElementById("id_drawing_2"),
         ];
         // get canvas
         var canvas = document.getElementById("canvas")
