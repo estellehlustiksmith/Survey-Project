@@ -199,6 +199,7 @@ function SectionB4_5(){
     document.getElementById("change_background_btn").style.display= "block";
     document.getElementById("drawing").style.display= "block";
     document.getElementById("clear_btn").style.display= "block";
+    document.getElementById("canvas_p").style.display= "block";
     document.getElementById("gallery_img").style.display= "none";
 }
 
@@ -221,6 +222,7 @@ function SectionB5() {
         document.getElementById("change_background_btn").style.display= "none";
         document.getElementById("clear_btn").style.display= "none";
         document.getElementById("drawing").style.display= "none";
+        document.getElementById("canvas_p").style.display= "none";
     }
     else{
         document.documentElement.scrollTop = 0;
