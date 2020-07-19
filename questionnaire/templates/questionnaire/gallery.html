@@ -7,7 +7,10 @@
     </div>   
     <div id='error' class="error-message">
         <span class="error-text">Please complete all the questions</span>
-    </div>  
+    </div>
+    <div id='max_length' class="error-message">
+        <span class="error-text">Your response is too long. Character limit is 2000.</span> 
+    </div>
     <div id='video'>
         <iframe src="https://giphy.com/embed/KeidxPJOMvfl53VlD5" width="571" height="299" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> 
     </div> 
@@ -48,6 +51,7 @@
         <button id="sectionb4_btn", type="button" onclick="SectionB4()">Continue</button>
         <button id="sectionb4_5_btn", type="button" value="2", onclick="SectionB4_5(); changeSection(this.value);">Continue</button>
         <button id="sectionb5_btn", type="button" onclick="SectionB5()">Continue</button>
+        <button id="finish", type="button" onclick="Finish()">Continue</button>
 
     </form>
     <script type="text/javascript" src="{% static 'js/gallery_script.js' %}"></script>

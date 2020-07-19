@@ -25,6 +25,7 @@ document.getElementById("canvas_p2").style.display= "none";
 document.getElementById("error").style.display= "none";
 document.getElementById("sectionb4_5_btn").style.display= "none";
 document.getElementById("video").style.display= "none";
+document.getElementById("max_length").style.display= "none";
 
 
 //Section B1 This is hiding all the paragraphs which are 2 or greater. 
@@ -89,7 +90,14 @@ function SectionB1() {
 }
 
 function SectionB2() {
-    if ((document.getElementById("id_questionB1_2").value.length != 0 )
+    document.getElementById("max_length").style.display= "none";
+    if (document.getElementById("id_questionB1_2").value.length > 2000 )
+    {
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        document.getElementById("max_length").style.display= "block";
+    }
+    else if ((document.getElementById("id_questionB1_2").value.length != 0 )
     && ((document.getElementById("id_questionB1_1_0").checked)
     || (document.getElementById("id_questionB1_1_1").checked)
     || (document.getElementById("id_questionB1_1_2").checked)))
