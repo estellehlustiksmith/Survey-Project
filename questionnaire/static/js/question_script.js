@@ -104,8 +104,8 @@ function SectionB2() {
         document.body.scrollTop = 0;
         document.getElementById("max_length").style.display= "block";
     }
-    else if ((document.getElementById("id_questionB1_2").value.length != 0 )
-    && (document.getElementById("id_questionB1_3").value.length != 0 )
+    else if //((document.getElementById("id_questionB1_2").value.length != 0 )&& 
+    ((document.getElementById("id_questionB1_3").value.length != 0 )
     && ((document.getElementById("id_questionB1_1_0").checked)
     || (document.getElementById("id_questionB1_1_1").checked)
     || (document.getElementById("id_questionB1_1_2").checked)))

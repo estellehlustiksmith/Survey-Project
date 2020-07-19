@@ -37,7 +37,7 @@ class Response(forms.ModelForm):
         widget=forms.RadioSelect(choices=CHOICES))
     
     questionB1_2 = forms.CharField(label='If yes what do you know about it?',
-        widget=forms.Textarea(attrs={'rows':10,'cols':60}))
+        widget=forms.Textarea(attrs={'rows':10,'cols':60}), required=False)
 
     questionB1_3 = forms.CharField(
         label='Describe your reaction to the artwork. What do you think it is about? How does it make you feel? Or if you prefer, write the first three words which spring to mind.',
@@ -165,7 +165,7 @@ class Gallery(forms.ModelForm):
         widget=forms.RadioSelect(choices=CHOICES))
     
     questionB1_2 = forms.CharField(label='If yes what do you know about it?',
-        widget=forms.Textarea(attrs={'rows':10,'cols':60}))
+        widget=forms.Textarea(attrs={'rows':10,'cols':60}), required=False)
 
     questionB1_3 = forms.CharField(
         label='Describe your reaction to the artwork. What do you think it is about? How does it make you feel? Or if you prefer, write the first three words which spring to mind.',
