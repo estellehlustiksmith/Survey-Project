@@ -1,6 +1,5 @@
 var paragraphs = document.getElementsByTagName("p");
 console.log(paragraphs);
-//document.getElementsByTagName("textarea").maxLength= "4";
 //var textarea = document.getElementsByTagName("textarea");
 //console.log(textarea);
 
@@ -27,9 +26,6 @@ document.getElementById("error").style.display= "none";
 document.getElementById("sectionb4_5_btn").style.display= "none";
 document.getElementById("video").style.display= "none";
 document.getElementById("max_length").style.display= "none";
-document.getElementById("finish").style.display= "none";
-document.getElementById("submit_p").style.display= "none";
-
 
 
 //Section B1 This is hiding all the paragraphs which are 2 or greater. 
@@ -72,11 +68,11 @@ function SectionB1() {
         for (i=15; i < paragraphs.length; i++) {
             paragraphs[i].style.display = "block";
         };
-        for (i=20;  i < paragraphs.length; i++) {
+        for (i=19;  i < paragraphs.length; i++) {
             paragraphs[i].style.display = "none";
         };
         document.getElementById("id_questionB1_1").style.display= "block";
-        document.getElementById("gallery_img").style.display= "block";
+        document.getElementById("building_img").style.display= "block";
         document.getElementById("sectionb2_btn").style.display= "block";
         document.getElementById("canvas").style.display= "none";
         document.getElementById("id_questionA_1").style.display= "none";
@@ -85,7 +81,6 @@ function SectionB1() {
         document.getElementById("id_questionA_4").style.display= "none";
         document.getElementById("id_questionA_5").style.display= "none";
         document.getElementById("sectionb1_btn").style.display= "none";
-
         // paragraphs[3].style.display = "none";
     }
     else{
@@ -96,16 +91,13 @@ function SectionB1() {
 
 function SectionB2() {
     document.getElementById("max_length").style.display= "none";
-    document.getElementById("error").style.display= "none";
-    if ((document.getElementById("id_questionB1_2").value.length > 2000 )
-    || (document.getElementById("id_questionB1_3").value.length > 2000))
+    if (document.getElementById("id_questionB1_2").value.length > 2000 )
     {
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
         document.getElementById("max_length").style.display= "block";
     }
     else if ((document.getElementById("id_questionB1_2").value.length != 0 )
-    && (document.getElementById("id_questionB1_3").value.length != 0 )
     && ((document.getElementById("id_questionB1_1_0").checked)
     || (document.getElementById("id_questionB1_1_1").checked)
     || (document.getElementById("id_questionB1_1_2").checked)))
@@ -113,21 +105,20 @@ function SectionB2() {
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
         document.getElementById("error").style.display= "none";
-
         var i;
         for (i=2; i <  paragraphs.length; i++) {
             paragraphs[i].style.display = "none";
         };
-        for (i=20; i < paragraphs.length; i++) {
+        for (i=19; i < paragraphs.length; i++) {
             paragraphs[i].style.display = "block";
         };
-        for (i=21; i < paragraphs.length; i++) {
+        for (i=20; i < paragraphs.length; i++) {
             paragraphs[i].style.display = "none";
         };
         document.getElementById("canvas_p").style.display= "block";
         document.getElementById("canvas").style.display= "block";
         document.getElementById("id_questionB1_1").style.display= "none";
-        document.getElementById("gallery_img").style.display= "none";
+        document.getElementById("building_img").style.display= "none";
         document.getElementById("change_background_btn").style.display= "block";
         document.getElementById("clear_btn").style.display= "block";
         document.getElementById("drawing").style.display= "block";
@@ -141,15 +132,7 @@ function SectionB2() {
 }
 
 function SectionB3() {
-    document.getElementById("max_length").style.display= "none";
-    document.getElementById("error").style.display= "none";
-    if (document.getElementById("id_questionB1_4").value.length > 2000 )
-    {
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-        document.getElementById("max_length").style.display= "block";
-    }
-    else if (document.getElementById("id_questionB1_4").value.length != 0 ) {
+    if (document.getElementById("id_questionB1_3").value.length != 0 ) {
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
         document.getElementById("error").style.display= "none";
@@ -157,10 +140,10 @@ function SectionB3() {
         for (i=2; i <  paragraphs.length; i++) {
             paragraphs[i].style.display = "none";
         };
-        for (i=21; i < paragraphs.length; i++) {
+        for (i=20; i < paragraphs.length; i++) {
             paragraphs[i].style.display = "block";
         };
-        for (i=24; i < paragraphs.length; i++) {
+        for (i=23; i < paragraphs.length; i++) {
             paragraphs[i].style.display = "none";
         };
         document.getElementById("canvas_p2").style.display= "block";
@@ -177,17 +160,8 @@ function SectionB3() {
 }
 
 function SectionB4() {
-    document.getElementById("max_length").style.display= "none";
-    document.getElementById("error").style.display= "none";
-    if ((document.getElementById("id_questionB1_5").value.length > 2000 )
-    || (document.getElementById("id_questionB1_6").value.length > 2000 )
-    || (document.getElementById("id_questionB1_7").value.length > 2000 ))
-    {
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-        document.getElementById("max_length").style.display= "block";
-    }
-    else if ((document.getElementById("id_questionB1_5").value.length != 0)
+    if ((document.getElementById("id_questionB1_4").value.length != 0 ) 
+    && (document.getElementById("id_questionB1_5").value.length != 0)
     && (document.getElementById("id_questionB1_6").value.length != 0)
     && (document.getElementById("id_questionB1_7").value.length != 0))
     {
@@ -198,10 +172,10 @@ function SectionB4() {
         for (i=2; i <  paragraphs.length; i++) {
             paragraphs[i].style.display = "none";
         };
-        for (i=24; i < paragraphs.length; i++) {
+        for (i=23; i < paragraphs.length; i++) {
             paragraphs[i].style.display = "block";
         };
-        for (i=25; i < paragraphs.length; i++) {
+        for (i=24; i < paragraphs.length; i++) {
             paragraphs[i].style.display = "none";
         };
         document.getElementById("canvas").style.display= "none";
@@ -210,7 +184,7 @@ function SectionB4() {
         document.getElementById("clear_btn").style.display= "none";
         document.getElementById("sectionb4_btn").style.display= "none";
         document.getElementById("sectionb4_5_btn").style.display= "block";
-        document.getElementById("building_img").style.display= "block";
+        document.getElementById("gallery_img").style.display= "block";
         document.getElementById("video").style.display= "none";
     }
     else{
@@ -220,39 +194,6 @@ function SectionB4() {
 }
 
 function SectionB4_5(){
-    document.getElementById("max_length").style.display= "none";
-    document.getElementById("error").style.display= "none";
-    if (document.getElementById("id_questionB1_8").value.length > 2000 )
-    {
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-        document.getElementById("max_length").style.display= "block";
-    }
-    else if (document.getElementById("id_questionB1_8").value.length != 0)
-    {
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-        document.getElementById("error").style.display= "none";
-        var i;
-        for (i=2; i <  paragraphs.length; i++) {
-            paragraphs[i].style.display = "none";
-        };
-        document.getElementById("sectionb4_5_btn").style.display= "none";
-        document.getElementById("sectionb5_btn").style.display= "block";
-        document.getElementById("canvas").style.display= "block";
-        document.getElementById("change_background_btn").style.display= "block";
-        document.getElementById("drawing").style.display= "block";
-        document.getElementById("clear_btn").style.display= "block";
-        document.getElementById("canvas_p").style.display= "block";
-        document.getElementById("building_img").style.display= "none";
-    }
-    else{
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-        document.getElementById("error").style.display= "block";}
-}
-
-function SectionB5() {
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
     document.getElementById("error").style.display= "none";
@@ -260,36 +201,18 @@ function SectionB5() {
     for (i=2; i <  paragraphs.length; i++) {
         paragraphs[i].style.display = "none";
     };
-    for (i=25; i < paragraphs.length; i++) {
-        paragraphs[i].style.display = "block";
-    };
-    document.getElementById("sectionb5_btn").style.display= "none";
-    document.getElementById("finish").style.display= "block";
+    document.getElementById("sectionb4_5_btn").style.display= "none";
+    document.getElementById("sectionb5_btn").style.display= "block";
+    document.getElementById("canvas").style.display= "block";
+    document.getElementById("change_background_btn").style.display= "block";
+    document.getElementById("drawing").style.display= "block";
+    document.getElementById("clear_btn").style.display= "block";
+    document.getElementById("canvas_p").style.display= "block";
     document.getElementById("gallery_img").style.display= "none";
-    document.getElementById("canvas").style.display= "none";
-    document.getElementById("change_background_btn").style.display= "none";
-    document.getElementById("clear_btn").style.display= "none";
-    document.getElementById("drawing").style.display= "none";
-    document.getElementById("canvas_p").style.display= "none";
 }
 
-function Finish(){
-    document.getElementById("max_length").style.display= "none";
-    document.getElementById("error").style.display= "none";
-    if ((document.getElementById("id_questionB1_9").value.length > 2000 )
-    || (document.getElementById("id_questionB1_10").value.length > 2000 )
-    || (document.getElementById("id_questionB1_11").value.length > 2000 )
-    || (document.getElementById("id_questionB1_12").value.length > 2000 ))
-    {
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-        document.getElementById("max_length").style.display= "block";
-    }
-    else if ((document.getElementById("id_questionB1_9").value.length != 0)
-    || (document.getElementById("id_questionB1_10").value.length != 0)
-    || (document.getElementById("id_questionB1_11").value.length != 0)
-    || (document.getElementById("id_questionB1_12").value.length != 0))
-    {
+function SectionB5() {
+    if (document.getElementById("id_questionB1_8").value.length != 0 ) {
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
         document.getElementById("error").style.display= "none";
@@ -297,9 +220,17 @@ function Finish(){
         for (i=2; i <  paragraphs.length; i++) {
             paragraphs[i].style.display = "none";
         };
-        document.getElementById("finish").style.display= "none";
+        for (i=24; i < paragraphs.length; i++) {
+            paragraphs[i].style.display = "block";
+        };
+        document.getElementById("sectionb5_btn").style.display= "none";
         document.getElementById("submit").style.display= "block";
-        document.getElementById("submit_p").style.display= "block";
+        document.getElementById("gallery_img").style.display= "none";
+        document.getElementById("canvas").style.display= "none";
+        document.getElementById("change_background_btn").style.display= "none";
+        document.getElementById("clear_btn").style.display= "none";
+        document.getElementById("drawing").style.display= "none";
+        document.getElementById("canvas_p").style.display= "none";
     }
     else{
         document.documentElement.scrollTop = 0;

@@ -25,6 +25,9 @@
 	    <br><br>If you would now like to change where you would draw the frame encompassing the artwork please redraw it on the image below. 
         <br>You can use the ‘Change background’ button to decide which image of the artwork to use. Draw by clicking and dragging your mouse. If you wish to reset the image, click the ‘Clear’ button. 
     </p>
+    <p id='submit_p'>
+        Please click the submit button to finish. 
+    </p>
     <div id="drawing">
         <div id="canvas-holder">
             <canvas id="canvas"></canvas>
@@ -51,6 +54,7 @@
         <button id="sectionb4_btn", type="button" onclick="SectionB4()">Continue</button>
         <button id="sectionb4_5_btn", type="button" value="2", onclick="SectionB4_5(); changeSection(this.value);">Continue</button>
         <button id="sectionb5_btn", type="button" onclick="SectionB5()">Continue</button>
+        <button id="finish", type="button" onclick="Finish()">Continue</button>
 
     </form>
     <script type="text/javascript" src="{% static 'js/question_script.js' %}"></script>
