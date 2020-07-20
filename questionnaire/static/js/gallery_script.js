@@ -102,12 +102,12 @@ function SectionB1() {
             }
         // paragraphs[3].style.display = "none";
     }
+    }
     else{
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
     document.getElementById("error").style.display= "block";}
     }
-}
 
 function SectionB2() {
     document.getElementById("max_length").style.display= "none";
