@@ -85,13 +85,28 @@ function SectionB1() {
         document.getElementById("id_questionA_4").style.display= "none";
         document.getElementById("id_questionA_5").style.display= "none";
         document.getElementById("sectionb1_btn").style.display= "none";
-
+        var j = 0;
+        if (j == 0) {
+            j = 1;
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+              if (width >= 30) {
+                clearInterval(id);
+                j = 0;
+            } 
+            else {
+                width++;
+                elem.style.width = width + "%";}
+            }
         // paragraphs[3].style.display = "none";
     }
     else{
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
     document.getElementById("error").style.display= "block";}
+    }
 }
 
 function SectionB2() {
@@ -104,7 +119,8 @@ function SectionB2() {
         document.body.scrollTop = 0;
         document.getElementById("max_length").style.display= "block";
     }
-    else if (//(document.getElementById("id_questionB1_2").value.length != 0 ) &&
+    else if ( 
+    //(document.getElementById("id_questionB1_2").value.length != 0 ) &&
     (document.getElementById("id_questionB1_3").value.length != 0 )
     && ((document.getElementById("id_questionB1_1_0").checked)
     || (document.getElementById("id_questionB1_1_1").checked)
@@ -113,7 +129,6 @@ function SectionB2() {
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
         document.getElementById("error").style.display= "none";
-
         var i;
         for (i=2; i <  paragraphs.length; i++) {
             paragraphs[i].style.display = "none";
@@ -133,6 +148,22 @@ function SectionB2() {
         document.getElementById("drawing").style.display= "block";
         document.getElementById("sectionb2_btn").style.display= "none";
         document.getElementById("sectionb3_btn").style.display= "block";
+        var j = 0;
+        if (j == 0) {
+            j = 1;
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+              if (width >= 30) {
+                clearInterval(id);
+                j = 0;
+            } 
+            else {
+                width++;
+                elem.style.width = width + "%";}
+            }
+    }
     }
     else{
         document.documentElement.scrollTop = 0;
@@ -169,6 +200,22 @@ function SectionB3() {
         document.getElementById("drawing").style.display= "block";
         document.getElementById("sectionb3_btn").style.display= "none";
         document.getElementById("sectionb4_btn").style.display= "block";
+        var j = 0;
+        if (j == 0) {
+            j = 1;
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+              if (width >= 44) {
+                clearInterval(id);
+                j = 0;
+            } 
+            else {
+                width++;
+                elem.style.width = width + "%";}
+            }
+    }
     }
     else {
         document.documentElement.scrollTop = 0;
@@ -212,6 +259,22 @@ function SectionB4() {
         document.getElementById("sectionb4_5_btn").style.display= "block";
         document.getElementById("building_img").style.display= "block";
         document.getElementById("video").style.display= "none";
+        var j = 0;
+        if (j == 0) {
+            j = 1;
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+              if (width >= 58) {
+                clearInterval(id);
+                j = 0;
+            } 
+            else {
+                width++;
+                elem.style.width = width + "%";}
+            }
+        }
     }
     else{
         document.documentElement.scrollTop = 0;
@@ -245,6 +308,22 @@ function SectionB4_5(){
         document.getElementById("clear_btn").style.display= "block";
         document.getElementById("canvas_p").style.display= "block";
         document.getElementById("building_img").style.display= "none";
+        var j = 0;
+        if (j == 0) {
+            j = 1;
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+              if (width >= 72) {
+                clearInterval(id);
+                j = 0;
+            } 
+            else {
+                width++;
+                elem.style.width = width + "%";}
+            }
+    }
     }
     else{
         document.documentElement.scrollTop = 0;
@@ -271,6 +350,22 @@ function SectionB5() {
     document.getElementById("clear_btn").style.display= "none";
     document.getElementById("drawing").style.display= "none";
     document.getElementById("canvas_p").style.display= "none";
+    var j = 0;
+    if (j == 0) {
+        j = 1;
+        var elem = document.getElementById("myBar");
+        var width = 1;
+        var id = setInterval(frame, 10);
+        function frame() {
+          if (width >= 86) {
+            clearInterval(id);
+            j = 0;
+        } 
+        else {
+            width++;
+            elem.style.width = width + "%";}
+        }
+    }
 }
 
 function Finish(){
@@ -287,8 +382,8 @@ function Finish(){
     }
     else if ((document.getElementById("id_questionB1_9").value.length != 0)
     || (document.getElementById("id_questionB1_10").value.length != 0)
-    || (document.getElementById("id_questionB1_11").value.length != 0)
-    || (document.getElementById("id_questionB1_12").value.length != 0))
+    || (document.getElementById("id_questionB1_11").value.length != 0))
+    //|| (document.getElementById("id_questionB1_12").value.length != 0))
     {
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
@@ -300,6 +395,22 @@ function Finish(){
         document.getElementById("finish").style.display= "none";
         document.getElementById("submit").style.display= "block";
         document.getElementById("submit_p").style.display= "block";
+        var j = 0;
+        if (j == 0) {
+            j = 1;
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+              if (width >= 100) {
+                clearInterval(id);
+                j = 0;
+            } 
+            else {
+                width++;
+                elem.style.width = width + "%";}
+            }
+    }
     }
     else{
         document.documentElement.scrollTop = 0;

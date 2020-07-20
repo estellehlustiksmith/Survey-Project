@@ -163,6 +163,7 @@ li{
 
 textarea{
     font-family: 'calibri';
+    width: 500px;
 }
 
 #submit{

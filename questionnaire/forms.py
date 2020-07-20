@@ -89,7 +89,7 @@ class Response(forms.ModelForm):
 
     questionB1_12 = forms.CharField(
         label='If you have any further comments about the topic, please leave them here:',
-        widget=forms.Textarea(attrs={'rows':10,'cols':60}))
+        widget=forms.Textarea(attrs={'rows':10,'cols':60}), required=False)
 
     class Meta:
         model = Response
@@ -217,7 +217,7 @@ class Gallery(forms.ModelForm):
 
     questionB1_12 = forms.CharField(
         label='If you have any further comments about the topic, please leave them here:',
-        widget=forms.Textarea(attrs={'rows':10,'cols':60}))
+        widget=forms.Textarea(attrs={'rows':10,'cols':65}), required=False)
 
     class Meta:
         model = Gallery

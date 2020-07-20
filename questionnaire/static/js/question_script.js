@@ -165,11 +165,11 @@ function SectionB2() {
                 elem.style.width = width + "%";}
             }
     }
+    }
     else{
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
         document.getElementById("error").style.display= "block";}
-    }
 }    
 
 function SectionB3() {
@@ -217,11 +217,11 @@ function SectionB3() {
                 elem.style.width = width + "%";}
             }
     }
+    }
     else {
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
         document.getElementById("error").style.display= "block";}
-    }
 }
 
 function SectionB4() {
@@ -325,11 +325,11 @@ function SectionB4_5(){
                 elem.style.width = width + "%";}
             }
     }
+    }
     else{
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
         document.getElementById("error").style.display= "block";}
-    }
 }
 
 function SectionB5() {
@@ -383,8 +383,8 @@ function Finish(){
     }
     else if ((document.getElementById("id_questionB1_9").value.length != 0)
     || (document.getElementById("id_questionB1_10").value.length != 0)
-    || (document.getElementById("id_questionB1_11").value.length != 0)
-    || (document.getElementById("id_questionB1_12").value.length != 0))
+    || (document.getElementById("id_questionB1_11").value.length != 0))
+    //|| (document.getElementById("id_questionB1_12").value.length != 0))
     {
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
@@ -412,9 +412,9 @@ function Finish(){
                 elem.style.width = width + "%";}
             }
     }
+    }
     else{
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
         document.getElementById("error").style.display= "block";}
-    }
 }
