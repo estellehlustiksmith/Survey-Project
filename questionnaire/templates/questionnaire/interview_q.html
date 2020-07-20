@@ -51,7 +51,8 @@
             ],
         };  
 
-        var current_section;
+        var current_section=0;
+        var background_num = 0;
 
         function preloadImages(array) {
             var count = 0;
@@ -63,9 +64,9 @@
                 var img = new Image();
                 img.onload = function() {
                     count += 1;
-                    //if (count == array.length) {
-                    //    setBackground('{% static "questionnaire/canvas_background.jpg" %}')
-                    //}
+                    if (count == array.length) {
+                        setBackground(section_images[current_section][background_num])
+                    }
                 }
                 list.push(img);
                 img.src = array[i];
@@ -83,8 +84,6 @@
 
         // get canvas 2D context and set him correct size
         var ctx = canvas.getContext('2d');
-
-        var background_num = 0;
 
         // last known position
         var pos = { x: 0, y: 0 };

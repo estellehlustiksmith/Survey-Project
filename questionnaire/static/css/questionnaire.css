@@ -173,14 +173,14 @@ textarea{
 #background_button {
     background-color: rgba(128, 128, 128, 0.76);
     border: transparent;
-    float: inline-start;
+    /* float: inline-start; */
 }
 
 #change_background {
     /*padding-right: 120px;*/
-    float: inline-start;
+    /*float: inline-start;*/
     padding-top: 13px;
-    padding-left: 20px;
+   /* padding-left: 20px;*/
 }
 
 #clear {
