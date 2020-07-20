@@ -382,8 +382,8 @@ function Finish(){
         document.getElementById("max_length").style.display= "block";
     }
     else if ((document.getElementById("id_questionB1_9").value.length != 0)
-    || (document.getElementById("id_questionB1_10").value.length != 0)
-    || (document.getElementById("id_questionB1_11").value.length != 0))
+    && (document.getElementById("id_questionB1_10").value.length != 0)
+    && (document.getElementById("id_questionB1_11").value.length != 0))
     //|| (document.getElementById("id_questionB1_12").value.length != 0))
     {
         document.documentElement.scrollTop = 0;
