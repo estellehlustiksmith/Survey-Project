@@ -125,9 +125,11 @@ class Interview(forms.ModelForm):
         fields=('over18','name','email')
 
 class Interview_q(forms.ModelForm):
+    name = forms.CharField(label='Name:',
+        widget=forms.TextInput(attrs={'size':60}))
     class Meta:
         model = Interview_q
-        fields=('int_drawing_0','int_drawing_1') 
+        fields=('name','int_drawing_0','int_drawing_1') 
         widgets = {
             'int_drawing_0': forms.HiddenInput(),
             'int_drawing_1': forms.HiddenInput()
