@@ -41,6 +41,7 @@ class Interview(models.Model):
     email = models.CharField(max_length=1028)
 
 class Interview_q(models.Model):
+    name =  models.CharField(max_length=1028)
     int_drawing_0 = models.CharField(max_length=1000000000)
     int_drawing_1 = models.CharField(max_length=1000000000)
 
