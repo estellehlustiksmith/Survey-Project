@@ -67,7 +67,7 @@ class Response(forms.ModelForm):
     #SectionB4
     #image of auction
     questionB1_8 = forms.CharField(
-        label='How do you know feel about the artwork in its gallery setting? Or if you prefer, write the first three words which spring to mind.',
+        label='How do you now feel about the artwork in its gallery setting? Or if you prefer, write the first three words which spring to mind.',
         widget=forms.Textarea(attrs={'rows':10,'cols':60}))
 
     #SectionB4.5
@@ -197,7 +197,7 @@ class Gallery(forms.ModelForm):
     #SectionB4
     #image of building
     questionB1_8 = forms.CharField(
-        label='How do you know feel about the artwork in its street setting? Or if you prefer, write the first three words which spring to mind.',
+        label='How do you now feel about the artwork in its street setting? Or if you prefer, write the first three words which spring to mind.',
         widget=forms.Textarea(attrs={'rows':10,'cols':60}))
 
     #SectionB4.5
